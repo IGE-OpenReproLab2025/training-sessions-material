@@ -6,10 +6,10 @@ You can find in this repo the material used for the training sessions of OpenRep
 The expected program is :
 
 - Session 1 Basic tools (March 6th)
-  - create GitHub account and join the openreprolab team
-  - accessing the computing platform
-  - jupyter notebook
-  - upload data in the storage
+  - create GitHub account and join the openreprolab team [Aurélie]
+  - accessing the computing platform [Mykael]
+  - jupyter notebook [Lucas G]
+  - upload data in the storage [Mondher]
 
 - Session 2 Daily workflow (March 13th)
   - notebook : journal, project, specific software library
