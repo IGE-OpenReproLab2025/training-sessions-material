@@ -11,6 +11,7 @@ The expected program is :
   - accessing the computing platform - 10mn [Mykael]
   - what is a jupyter notebook - 15mn [Lucas G]
   - upload data in the storage and access it from jupyter - 15mn [Mondher]
+  - hands-on and debugging - 1h 
 
 - Session 2 Daily workflow (March 13th, 3pm)
   - git commands and workflow [Ruth]
