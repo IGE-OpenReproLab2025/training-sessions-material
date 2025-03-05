@@ -14,9 +14,9 @@ The expected program is :
   - hands-on and debugging - 1h 
 
 - Session 2 Daily workflow (March 13th, 3pm)
-  - git commands and workflow [Ruth]
   - rules of reproducible notebook [Aurélie]
-  - typical workflow : journal, project, specific software library [Julien]
+  - openreprolab workflow : lab-book, collab-material and project repos [Julien]
+  - git quikstart and creation of the repos  [Ruth]
  
  
 - Session 3 Environnments (March 20th)
