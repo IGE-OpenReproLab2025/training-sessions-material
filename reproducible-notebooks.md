@@ -2,6 +2,9 @@
 
 Source : [a paper by Adam Rule et al.](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007007#pcbi.1007007.ref015)
 
+
+
+
 ## TELL A STORY FOR AN AUDIENCE
 
 title
@@ -16,7 +19,11 @@ comments
 
 ## MODULARIZE CODE
 
+functions, papermill
+
 ## RECORD DEPENDENCIES
+
+watermark
 
 ## USE VERSION CONTROL
 
