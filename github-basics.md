@@ -49,3 +49,5 @@ Then an invitation will be sent to your personnal mail
 or you can just visit [github.com/IGE-OpenReproLab2025](github.com/IGE-OpenReproLab2025) and a banner will be waiting for you
 
 ![github.com](pics/github-invitation2.png)
+
+Public/Private status on people in the orga
