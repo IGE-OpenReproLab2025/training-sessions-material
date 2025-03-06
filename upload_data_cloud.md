@@ -36,6 +36,8 @@ wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopen
 
 ## COPY TO IGE-CALCUL1
 
+If you are outside the lab or via WIFI : ```ssh agalan@ige-ssh.u-ga.fr``
+
 Connect and configure your access to ige-calcul1 following the first steps of [this tutorial](https://ige-calcul.github.io/public-docs/docs/clusters/Ige/ige-calcul1.html)
 
 The mirror of your private-storage is located at ```/mnt/summer/openreprolab/USER_GITHUB```
