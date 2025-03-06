@@ -23,3 +23,5 @@ ds = xr.open_dataset(store, engine='zarr', chunks={})
 ## WGET/CURL IN THE TERMINAL
 
 ## COPY TO IGE-CALCUL1
+
+General informations on [ige-calcul1](https://ige-calcul.github.io/public-docs/docs/clusters/Ige/ige-calcul1.html)
