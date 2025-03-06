@@ -1,6 +1,6 @@
  Welcome to IGE OpenReproLab 2025 ! 
  
-##  About ige-calcul plateform : 
+##  About *computing plateform* (ige-calcul): 
 
 an experimental structure funded by IGE as an internal project for fostering exchanges on scientific computing, data processing, numerical tools
 
