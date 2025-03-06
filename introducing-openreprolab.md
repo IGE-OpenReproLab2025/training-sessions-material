@@ -20,7 +20,7 @@ A new initiative for fostering open science and reproducible practices at IGE (o
 What we will (try to) provide : 
  - a computing environment : jupyterhub + cloud storage
  - training material : https://github.com/IGE-OpenReproLab2025/training-sessions-material
- - technical support : on site on Thursday afternoons and through  
+ - technical support : on site on Thursday afternoons and through our discord server!   
 
 What we are expecting from you : 
  - use the computing environment and attend the training session ! 
