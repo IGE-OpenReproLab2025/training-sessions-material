@@ -31,5 +31,5 @@ A ReproHack will be organised in early July (TBD) for testing how reproducible i
  
  
 ## Cautionary remarks 
-We are doing our best for this effort to be useful, we will strive to make it so, but keep in mind that this effort is still experimental. We will all learn as we go, and thanks you in advance for your understanding and positive mindset. 
+We are doing our best for this effort to be useful, we will strive to make it so, but keep in mind that this effort is still experimental. We will all learn as we go, so we thank you in advance for your understanding and your positive mindset. 
 
