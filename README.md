@@ -9,7 +9,7 @@ The expected program is :
   - [introducing OpenReproLab initiative](introducing-openreprolab.md) - 5mn [Julien]
   - [create GitHub account and join the openreprolab team](github-basics.md) - 15mn [Aurélie]
   - accessing the computing platform - 10mn [Mykael]
-  - what is a jupyter notebook - 15mn [Lucas G]
+  - what is a jupyter notebook : *notebook-basics.ipynb* - 15mn [Lucas G]
   - [upload data in the storage and access it from jupyter](upload_data_cloud.md) - 15mn [Aurélie/Mykael]
   - hands-on and debugging - 1h 
 
