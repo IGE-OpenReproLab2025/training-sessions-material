@@ -5,7 +5,7 @@ You can find in this repo the material used for the training sessions of OpenRep
 
 The expected program is :
 
-- **Session 1 Basic tools** (March 6th, 1.30pm)
+- **Session 1 - Basic tools** (March 6th, 1.30pm)
   - [introducing OpenReproLab initiative](introducing-openreprolab.md) - 5mn [Julien]
   - [create GitHub account and join the openreprolab team](github-basics.md) - 15mn [Aurélie]
   - accessing the computing platform - 10mn [Mykael]
@@ -13,20 +13,20 @@ The expected program is :
   - [upload data in the storage and access it from jupyter](upload_data_cloud.md) - 15mn [Aurélie/Mykael]
   - hands-on and debugging - 1h 
 
-- Session 2 Daily workflow (March 13th, 3pm)
+- **Session 2 - Daily workflow** (March 13th, 3pm)
   - rules of reproducible notebook [Aurélie]
   - openreprolab workflow : lab-book, collab-material and project repos [Julien]
-  - git quikstart and creation of the repos  [Ruth]
+  - git quickstart and creation of the repos  [Ruth]
  
  
-- Session 3 Environnments (March 20th)
+- **Session 3 - Environnments** (March 20th)
   - conda/pip install
   - environments
  
-- Session 4 Advanced software development (March 27th)
+- **Session 4 - Advanced software development** (March 27th)
   - modules, library packaging [Jordi ?]
 
-- Session 5 Documentation and conservation (April 3rd)
+- **Session 5 - Documentation and conservation** (April 3rd)
   - for data : meta data, readme, conventions, markdown, zenodo
   - for software : docstring, reathedoc, software heritage [Lucas B ?]
 
