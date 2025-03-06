@@ -14,7 +14,7 @@ in practice :
  - a jupyterbook : https://ige-calcul.github.io/public-docs/
 
 
-## OpenReproLab 
+## About OpenReproLab 
 A new initiative for fostering open science and reproducible practices at IGE (official agenda), and test our new computing infrastructure (hidden agenda !). 
 
 What we will (try to) provide : 
