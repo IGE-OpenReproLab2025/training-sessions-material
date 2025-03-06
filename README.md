@@ -30,3 +30,6 @@ The expected program is :
   - for data : meta data, readme, conventions, markdown, zenodo
   - for software : docstring, reathedoc, software heritage [Lucas B ?]
 
+## Useful links
+- https://openreprolab-ige.osug.fr
+- https://ige-calcul.github.io/public-docs/docs/index.html
