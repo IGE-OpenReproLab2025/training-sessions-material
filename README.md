@@ -6,7 +6,7 @@ You can find in this repo the material used for the training sessions of OpenRep
 The expected program is :
 
 - Session 1 Basic tools (March 6th, 1.30pm)
-  - introduction : context and objectives - 5mn [Julien]
+  - [introducing OpenReproLab initiative](introducing-openreprolab.md) - 5mn [Julien]
   - [create GitHub account and join the openreprolab team](github-basics.md) - 15mn [Aurélie]
   - accessing the computing platform - 10mn [Mykael]
   - what is a jupyter notebook - 15mn [Lucas G]
