@@ -10,7 +10,7 @@ The expected program is :
   - [create GitHub account and join the openreprolab team](github-basics.md) - 15mn [Aurélie]
   - accessing the computing platform - 10mn [Mykael]
   - what is a jupyter notebook - 15mn [Lucas G]
-  - upload data in the storage and access it from jupyter - 15mn [Mondher]
+  - [upload data in the storage and access it from jupyter](upload_data_cloud.md) - 15mn [Aurélie/Mykael]
   - hands-on and debugging - 1h 
 
 - Session 2 Daily workflow (March 13th, 3pm)
