@@ -5,15 +5,19 @@
 ### Notebook 1
 
 What is wrong with this notebook ?
+
 ![](pics/notebook-error1.png)
 
 How to fix it :
+
 <img src="pics/notebook-solution1.png" alt="drawing" width="500"/>
 
 What is wrong with this notebook ?
+
 ![](pics/notebook-error2.png)
 
 How to fix it :
+
 ![](pics/notebook-solution2.png)
 
 What is wrong with this notebook ?
