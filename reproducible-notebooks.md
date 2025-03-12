@@ -18,12 +18,14 @@ What is wrong with this notebook ?
 
 How to fix it :
 
-![](pics/notebook-solution2.png)
+<img src="pics/notebook-solution2.png" alt="drawing" width="600"/>
 
 What is wrong with this notebook ?
+
 ![](pics/notebook-error3.png)
 
 How to fix it :
+
 ![](pics/notebook-solution3.png)
 
 
