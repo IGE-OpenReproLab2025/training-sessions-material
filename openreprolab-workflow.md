@@ -14,10 +14,10 @@ The work flow we proposed is based on three different GitHub repositories, which
 ## Your own personal lab-book
 This is where you will store your work on a daily basis. This repository can be public if you want, but we recommend you make it private, for you only. It should be your safe space. 
 
-## A collaboration hub 
+## A collaboration hub on this projec
 This is where you will  store the material for interacting with your collaborators on this project. This repository can be public if you want, but we recommend you make it private, and accessible to you and your collaborators only.
 
-## project repos
+## A open place for sharing your work. 
 This is where you will storing the all the material  for reproducing your work. This repository should be public. 
 
 ## In practice 
