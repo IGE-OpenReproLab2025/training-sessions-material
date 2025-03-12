@@ -57,13 +57,22 @@ If you are tempted to duplicate an entire notebook to change one or a few parame
 ### RECORD DEPENDENCIES
 
 Use watermark inside the notebook to fix the versions used in it
+Provide the environment requirements alongside the notebook
 
 ### USE VERSION CONTROL
 
+See [the next git tutorial](git-tuto.md) 
+
 ### BUILD A PIPELINE
+
+Organization of the notebook : parameters at the beginning, restart the whole notebook to be sure everything works
 
 ### SHARE AND EXPLAIN YOUR DATA
 
+See future tutorial
+
 ### DESIGN YOUR NOTEBOOKS TO BE READ, RUN AND EXPLORED
+
+Share it on github.com or in a binder environment for people to explore it
 
 
