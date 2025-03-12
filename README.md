@@ -15,7 +15,7 @@ The expected program is :
 
 - **Session 2 - Daily workflow** (March 13th, 3pm)
   - rules of reproducible notebook [Aurélie]
-  - openreprolab workflow : lab-book, collab-material and project repos [Julien]
+  - [openreprolab workflow : lab-book, collab-material and project repos](openreprolab-workflow.md) [Julien]
   - git quickstart and creation of the repos  [Ruth]
  
  
