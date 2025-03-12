@@ -18,12 +18,12 @@ Here's a step-by-step tutorial for using Git/GitHub and making your first commit
 ### Step 0: create a new repo
 Do you already have a GitHub repository on the OpenReproLab space? If so, go directly to step 1.
 
-<p align=center><img width="586" alt="new-repo" src="https://github.com/user-attachments/assets/47707555-16ef-4115-aaff-f1c72eb4b424" /></p>
+<p align=center><img width="586" alt="new-repo" src="pics/new-repo.png" /></p>
 
 1. click on the `+` button
 2. click on `New repository`
 
-<p align=center><img width="741" alt="repo-form" src="https://github.com/user-attachments/assets/be29e909-3dba-44d4-8f77-37689984cb8d" /></p>
+<p align=center><img width="741" alt="repo-form" src="pics/repo-form.png" /></p>
 
 1. change the owner to `IGE-OpenReproLab2025`
 2. name your repository
@@ -62,7 +62,7 @@ The personal access token is our recommended way to connect your JupyterLab and 
 ### Optional Step: get your GitHub anonymous email (and take care of your privacy)
 If you want to be a public person and don't mind email spam, go to step 3. 
 
-<p align=center><img width="1153" alt="git-mail" src="https://github.com/user-attachments/assets/4706b764-a45d-46eb-8348-bdd98b0c8578" /></p>
+<p align=center><img width="1153" alt="git-mail" src="pics/git-mail.png" /></p>
 
 1. go to your personal account settings
 2. select the `Emails` menu
@@ -74,7 +74,7 @@ If you don't have a anonymous GitHub email visible, you may need to strengthen y
 ### Step 2: setup your git config
 You now need to configure your JupyterLab space to use your GitHub identifiers.
 
-<p align=center><img width="745" alt="git-conf" src="https://github.com/user-attachments/assets/60f1d647-da6d-4e93-8755-e559d34a08d1" /></p>
+<p align=center><img width="745" alt="git-conf" src="pics/git-conf.png" /></p>
 
 1. open a command terminal in your JupyterLab space
 2. configure your GitHub username for Git with the command `git config --global user.name` (and use your own name, not `ekwaly`!).
@@ -95,7 +95,7 @@ To be sure to use the right communication channel (HTTPS) between your JupyterLa
 
 Now you need to clone your reprository, i.e. download it and configure it in your JupyterLab space.
 
-<p align=center><img width="893" alt="git-clone" src="https://github.com/user-attachments/assets/4d185718-b262-4714-a47e-93656818c1f1" /></p>
+<p align=center><img width="893" alt="git-clone" src="pics/git-clone.png" /></p>
 
 1. open a command terminal in your JupyterLab space
 2. clone the repository using the `git clone` command + the previously copied address
@@ -110,7 +110,7 @@ Commit allows you to add a version to your work history. This is a local operati
 
 To commit, you first need to `add` the files you want to track in the history. Often you `add`/track all the files in the cloned repository, for simplicity's sake, and then exclude some of them (search .gitignore on internet if you need to).
 
-<p align=center><img width="587" alt="git-add" src="https://github.com/user-attachments/assets/9d5e880b-b73b-4bae-82ed-81a0b1d02777" /></p>
+<p align=center><img width="587" alt="git-add" src="pics/git-add.png" /></p>
 
 1. create an empty file, for the example
 2. if necessary, check the status of the repository to list untracked files
@@ -119,7 +119,7 @@ To commit, you first need to `add` the files you want to track in the history. O
 
 Everything is ready to commit the tracked files and add the current version of these files to the history.
 
-<p align=center><img width="779" alt="git-commit" src="https://github.com/user-attachments/assets/0801f4a9-bac1-4efa-ad8a-012a66dea4a5" /></p>
+<p align=center><img width="779" alt="git-commit" src="pics/git-commit.png" /></p>
 
 1. run the command `git commit -m "message"` and add a clear comment about what the commit contains
 2. view the changes applied between the previous version and the new one
@@ -138,7 +138,7 @@ A set of very simple rules that you can apply:
 ### Step 5: push you work
 It's now time to push! Dead simple, if possible: push your work after each commit. Push is the action of sending your history to GitHub (or another remote server). When you're working alone, you can push as often as you like. When you work collaboratively on a repository, you'll see that there's a little organization to be defined between the contributors. But let's save that for another time.
 
-<p align=center><img width="779" alt="git-push" src="https://github.com/user-attachments/assets/26e39b46-4603-4142-a054-d07a868217f5" /></p>
+<p align=center><img width="779" alt="git-push" src="pics/git-push.png" /></p>
 
 1. push your history with `git push`
 2. see the GitHub repository on which it lands
