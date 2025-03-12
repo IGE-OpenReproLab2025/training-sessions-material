@@ -8,22 +8,22 @@ Source : [a paper by Adam Rule et al.](https://journals.plos.org/ploscompbiol/ar
 ### Notebook 1
 
 What is wrong with this notebook ?
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-error1.png)
+![](pics/notebook-error1.png)
 
 How to fix it :
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-solution1.png)
+![](pics/notebook-solution1.png)
 
 What is wrong with this notebook ?
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-error2.png)
+![](pics/notebook-error2.png)
 
 How to fix it :
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-solution2.png)
+![](pics/notebook-solution2.png)
 
 What is wrong with this notebook ?
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-error3.png)
+![](pics/notebook-error3.png)
 
 How to fix it :
-![](pics/https://github.com/IGE-OpenReproLab2025/training-sessions-material/blob/main/pics/notebook-solution3.png)
+![](pics/notebook-solution3.png)
 
 
 ## TELL A STORY FOR AN AUDIENCE
