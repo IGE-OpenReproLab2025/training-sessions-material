@@ -34,25 +34,25 @@ Do you already have a GitHub repository on the OpenReproLab space? If so, go dir
 ### Step 1: generate a new personal access token
 The personal access token is our recommended way to connect your JupyterLab and GitHub. Once you've generated the token and saved it, you can use it like a password.
 
-<p align=center><img width="800" alt="new-token" src="screenshots/new-token.png" /></p>
+<p align=center><img width="800" alt="new-token" src="pics/new-token.png" /></p>
 
 1. From your GitHub settings, go to `Developer settings` (right at the bottom!) > `Personal access tokens` > `Fine-grained tokens` and select `Generate new token`
 
-<p align=center><img width="800" alt="token-name" src="screenshots/token-name.png" /></p>
+<p align=center><img width="800" alt="token-name" src="pics/token-name.png" /></p>
 
 2. Give the token a name (e.g. OpenReproLab)
 3. Set the resource owner to `IGE-OpenReproLab2025`
 4. Add an expiration date and a description
 
-<p align=center><img width="800" alt="repo-access" src="screenshots/repo-access.png" /></p>
+<p align=center><img width="800" alt="repo-access" src="pics/repo-access.png" /></p>
 
 5. Select which repositories can be accessed with the token
 
-<p align=center><img width="800" alt="token-permissions" src="screenshots/token-permissions.png" /></p>
+<p align=center><img width="800" alt="token-permissions" src="pics/token-permissions.png" /></p>
 
 6. Configure the permissions: under `Repository permissions`, `Contents` needs to be set to `Access: Read and write`. `Account permissions` can be left as it is.
 
-<p align=center><img width="800" alt="generate-token" src="screenshots/generate-token.png" /></p>
+<p align=center><img width="800" alt="generate-token" src="pics/generate-token.png" /></p>
 
 7. Generate your token
 8. Important! Copy your token so that you can use it later.
@@ -85,7 +85,7 @@ You now need to configure your JupyterLab space to use your GitHub identifiers.
 ### Step 3: clone your repository (with https://)
 To be sure to use the right communication channel (HTTPS) between your JupyterLab space and your GitHub.
 
-<p align=center><img width="800" alt="repo-ssh" src="screenshots/https-address.png" /></p>
+<p align=center><img width="800" alt="repo-ssh" src="pics/https-address.png" /></p>
 
 1. go to the work repository
 2. check that you are on the `code` tab
