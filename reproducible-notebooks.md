@@ -9,6 +9,7 @@ What is wrong with this notebook ?
 
 How to fix it :
 ![](pics/notebook-solution1.png)
+<img src="pics/notebook-solution1.png" alt="drawing" width="100"/>
 
 What is wrong with this notebook ?
 ![](pics/notebook-error2.png)
