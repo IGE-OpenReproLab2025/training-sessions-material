@@ -14,7 +14,7 @@ How to fix it :
 
 What is wrong with this notebook ?
 
-![](pics/notebook-error2.png)
+<img src="pics/notebook-error2.png" alt="drawing" width="500"/>
 
 How to fix it :
 
