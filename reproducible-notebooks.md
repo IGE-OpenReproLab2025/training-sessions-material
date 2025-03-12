@@ -56,7 +56,7 @@ If you are tempted to duplicate an entire notebook to change one or a few parame
 
 ### RECORD DEPENDENCIES
 
-watermark
+Use watermark inside the notebook to fix the versions used in it
 
 ### USE VERSION CONTROL
 
