@@ -22,7 +22,7 @@ How to fix it :
 
 What is wrong with this notebook ?
 
-![](pics/notebook-error3.png)
+<img src="pics/notebook-error3.png" alt="drawing" width="700"/>
 
 How to fix it :
 
