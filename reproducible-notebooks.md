@@ -1,7 +1,4 @@
-# 10 Rules of reproducible notebook
-
-Source : [a paper by Adam Rule et al.](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007007#pcbi.1007007.ref015)
-
+# Reproducible notebook
 
 ## POP QUIZZ
 
@@ -26,32 +23,36 @@ How to fix it :
 ![](pics/notebook-solution3.png)
 
 
-## TELL A STORY FOR AN AUDIENCE
+## 10 rules for a reproducible notebook
+
+Source : [a paper by Adam Rule et al.](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007007#pcbi.1007007.ref015)
+
+### TELL A STORY FOR AN AUDIENCE
 
 title
 
 markdown
 
-## DOCUMENT THE PROCESS, NOT JUST THE RESULTS
+### DOCUMENT THE PROCESS, NOT JUST THE RESULTS
 
 comments
 
-## USE CELL DIVISIONS TO MAKE STEPS CLEAR
+### USE CELL DIVISIONS TO MAKE STEPS CLEAR
 
-## MODULARIZE CODE
+### MODULARIZE CODE
 
 functions, papermill
 
-## RECORD DEPENDENCIES
+### RECORD DEPENDENCIES
 
 watermark
 
-## USE VERSION CONTROL
+### USE VERSION CONTROL
 
-## BUILD A PIPELINE
+### BUILD A PIPELINE
 
-## SHARE AND EXPLAIN YOUR DATA
+### SHARE AND EXPLAIN YOUR DATA
 
-## DESIGN YOUR NOTEBOOKS TO BE READ, RUN AND EXPLORED
+### DESIGN YOUR NOTEBOOKS TO BE READ, RUN AND EXPLORED
 
 
