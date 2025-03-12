@@ -23,8 +23,8 @@ This is where you will be storing the all the material for reproducing your work
 ## In practice 
 We will now go through the different templates that we have prepared : 
 
- - https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_acronym-project
-
  - https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_personnal-lab-book
 
  - https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_collab-material
+ 
+ - https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_acronym-project
