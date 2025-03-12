@@ -1,5 +1,5 @@
 # Git-ting started with Git and GitHub
-Tutorial written by ekwaly and adapted for CERTAINTY/OpenReproLab by Ruth Price
+Tutorial written by ekwaly and adapted for OpenReproLab by Ruth Price
 
 ## A few concepts
 Git is a code versioning and sharing tool. It is the result of 20 years of community and collaborative work by millions of developers, contributors and users. It is the perfect example of an open-source tool that has become an interoperable standard used almost universally. Your scientific work aims to do no less!
@@ -16,7 +16,7 @@ There are other common or advanced concepts, but we won't go into them here.
 Here's a step-by-step tutorial for using Git/GitHub and making your first commits/pushes.
 
 ### Step 0: create a new repo
-Do you already have a GitHub repository on the [CERTAINTY/OpenReproLab] space? If so, go directly to step 1.
+Do you already have a GitHub repository on the OpenReproLab space? If so, go directly to step 1.
 
 <p align=center><img width="586" alt="new-repo" src="https://github.com/user-attachments/assets/47707555-16ef-4115-aaff-f1c72eb4b424" /></p>
 
@@ -25,7 +25,7 @@ Do you already have a GitHub repository on the [CERTAINTY/OpenReproLab] space? I
 
 <p align=center><img width="741" alt="repo-form" src="https://github.com/user-attachments/assets/be29e909-3dba-44d4-8f77-37689984cb8d" /></p>
 
-1. change the owner to `[certainty-aci/IGE-OpenReproLab2025]`
+1. change the owner to `IGE-OpenReproLab2025`
 2. name your repository
 3. add an initial README file
 4. validate
@@ -40,8 +40,8 @@ The personal access token is our recommended way to connect your JupyterLab and 
 
 <p align=center><img width="800" alt="token-name" src="screenshots/token-name.png" /></p>
 
-2. Give the token a name (e.g. CERTAINTY)
-3. Set the resource owner to [`certainty-aci`/`IGE-OpenReproLab2025`]
+2. Give the token a name (e.g. OpenReproLab)
+3. Set the resource owner to `IGE-OpenReproLab2025`
 4. Add an expiration date and a description
 
 <p align=center><img width="800" alt="repo-access" src="screenshots/repo-access.png" /></p>
