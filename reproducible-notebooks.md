@@ -8,8 +8,7 @@ What is wrong with this notebook ?
 ![](pics/notebook-error1.png)
 
 How to fix it :
-![](pics/notebook-solution1.png)
-<img src="pics/notebook-solution1.png" alt="drawing" width="100"/>
+<img src="pics/notebook-solution1.png" alt="drawing" width="500"/>
 
 What is wrong with this notebook ?
 ![](pics/notebook-error2.png)
