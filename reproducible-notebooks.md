@@ -51,6 +51,9 @@ Instead of duplicating cell to repeat an operation that more than 5 lines long, 
 
 If you are tempted to duplicate an entire notebook to change one or a few parameters, use papermill instead
 
+<img src="pics/papermill.png" alt="drawing" width="600"/>
+
+
 ### RECORD DEPENDENCIES
 
 watermark
