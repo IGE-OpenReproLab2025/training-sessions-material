@@ -18,15 +18,18 @@ The expected program is :
   - [openreprolab workflow : lab-book, collab-material and project repos](openreprolab-workflow.md) [Julien]
   - [git quickstart and creation of the repos](git-tuto.md)  [Ruth]
  
+
+- **Session 3 - Check-point** (March 20th, 1pm)
+  - check everyone up to speed, welcoming newcomers
  
-- **Session 3 - Environnments** (March 20th)
+- **Session 4 - Environnments** (March 27th)
   - conda/pip install
   - environments
  
-- **Session 4 - Advanced software development** (March 27th)
+- **Session 4 - Advanced software development** (April 3rd)
   - modules, library packaging [Jordi ?]
 
-- **Session 5 - Documentation and conservation** (April 3rd)
+- **Session 5 - Documentation and conservation** (April 10th)
   - for data : meta data, readme, conventions, markdown, zenodo
   - for software : docstring, reathedoc, software heritage [Lucas B ?]
 
