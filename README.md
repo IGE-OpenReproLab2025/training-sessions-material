@@ -19,17 +19,20 @@ The expected program is :
   - [git quickstart and creation of the repos](git-tuto.md)  [Ruth]
  
 
-- **Session 3 - Check-point** (March 20th, 1pm)
-  - check everyone up to speed, welcoming newcomers
+- **Session 3 - Check-point #1 : on GitHub repositories** (March 20th, 1pm)
+  - checking if everyone is up to speed, welcoming newcomers
  
 - **Session 4 - Environnments** (March 27th)
   - conda/pip install
   - environments
  
-- **Session 4 - Advanced software development** (April 3rd)
+- **Session 5 - Functions, modules : the basic of software packaging in Python** (April 3rd)
   - modules, library packaging [Jordi ?]
 
-- **Session 5 - Documentation and conservation** (April 10th)
+- **Session 6 - Ckeck point #2 : on data workflow**
+  - check if everyone is up to speed, discussing individual data workflow  
+
+- **Session 7 - Documentation and conservation** (April 10th)
   - for data : meta data, readme, conventions, markdown, zenodo
   - for software : docstring, reathedoc, software heritage [Lucas B ?]
 
