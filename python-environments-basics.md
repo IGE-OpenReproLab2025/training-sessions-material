@@ -19,5 +19,5 @@
 ## How to customize your environment
 (MV)
 
-## Documenting you environment in jupyter notebook
+## Documenting your environment in jupyter notebook
 (AA)
