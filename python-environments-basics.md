@@ -40,7 +40,7 @@ When you open a notebook via the **JupyterLab** launcher, there is a choice avai
 A "_kernel_" is a **Mamba** environment ready to be used in a notebook. Here, the _"Python 3 (ipykernel)"_ kernel corresponds to the **Pangeo** "_notebook_" environment.
 
 > [!WARNING]
-> Each terminal can load a different environment and that the notebook kernel is not linked to the terminal environment. These are different contexts.
+> Each terminal can load a different **Mamba** environment and a notebook kernel is not linked to any terminal environment. These are different contexts which must be configured separately.
 
 ## How to customize your environment
 
