@@ -74,13 +74,15 @@ So don't mix `pip` commands with `conda` or `pipx` commands. The only exception 
 
 By default, a **Mamba** environment is installed in your online **JupyterLab**. This is a **Pangeo** environment known simply as "_notebook_". **Pangeo** is a community of geoscientists who have listed the most commonly used packages in **Python**.
 
-> [!NOTE]
-> Run the `mamba list` command to obtain a list of the packages **in the environment you're using**.
+```bash
+mamba list # To obtain a list of the packages in the environment you're using
+```
 
 Every terminal you open in **JupyterLab** automatically loads this "_notebook_" environment by default (this behavior may change if you tinker). So if you're lost, just relaunch your terminal.
 
-> [!NOTE]
-> Run the `mamba info` command to learn more **about your currently loaded environment**.
+```bash
+mamba info # To learn more about your currently loaded environment
+```
 
 When you open a notebook via the **JupyterLab** launcher, there is a choice available: "_Python 3 (ipykernel)_" kernel (see below).
 
@@ -97,21 +99,24 @@ This default environment may become insufficient. You may need a specific **Pyth
 
 In your **JupyterLab** online, the default **Pangeo** "_notebook_" environment cannot be persistently modified. This means that if you install a package, it will disappear the next time you reboot. So you need a new **Mamba** environment.
 
-> [!NOTE]
-> Run `mamba create -n my-env-name` to create a new **Mamba** environment that will exist throughout your next sessions.
+```bash
+mamba create -n my-env-name # To create a new environment that will exist throughout your next sessions
+```
 
 You then need to "_activate_" this new **Mamba** environment to be able to use its packages. Activation is not automatic when a new terminal is opened, so you may need to activate it if necessary.
 
-> [!NOTE]
-> Run `conda activate my-env-name` to change from the default environment to that of "_my-env-name_".
+```bash
+conda activate my-env-name # To activate another environment
+```
 
 > [!WARNING]
 > Note that the command `conda activate ...` is used instead of `mamba activate ...` here, on purpose. If you run `mamba activate ...`, the terminal will first ask you to run `mamba init`. However, `mamba init` permanently alters the behavior of **JupyterLab**, so I don't recommend it. This is the only exception to the use of `mamba` and is specific to **OpenReproLab**.
 
 This "_my-env-name_" environment is personal and contains almost no packages. It cannot become a notebook kernel because it lacks the essential "_ipykernel_" package.
 
-> [!NOTE]
-> Run `mamba install ipykernel` to install the "_ipykernel_" package in the currently activated environment.
+```bash
+mamba install ipykernel # To install the package in the currently activated environment
+```
 
 After a few minutes at most, you should be able to use this environment as a kernel to run your notebooks.
 
