@@ -93,11 +93,39 @@ A "_kernel_" is a **Mamba** environment ready to be used in a notebook. Here, th
 
 ## How to customize your environment
 
-Example 1: you need a Python library whose documentation recommends using “pip install my-lib”? There's a very good chance that “mamba install my-lib” will install the same package, or perhaps “mamba install my_lib” - check it out on the Web!
+This default environment may become insufficient. You may need a specific **Python** library to manipulate your data, or a system package to complement your **Bash** script.
 
-Example 2: You need the “curl” system command? Then “mamba install curl” will let you use it in a terminal! No need to run “apt install curl”.
+In your **JupyterLab** online, the default **Pangeo** "_notebook_" environment cannot be persistently modified. This means that if you install a package, it will disappear the next time you reboot. So you need a new **Mamba** environment.
 
+> [!NOTE]
+> Run `mamba create -n my-env-name` to create a new **Mamba** environment that will exist throughout your next sessions.
 
+You then need to "_activate_" this new **Mamba** environment to be able to use its packages. Activation is not automatic when a new terminal is opened, so you may need to activate it if necessary.
+
+> [!NOTE]
+> Run `conda activate my-env-name` to change from the default environment to that of "_my-env-name_".
+
+> [!WARNING]
+> Note that the command `conda activate ...` is used instead of `mamba activate ...` here, on purpose. If you run `mamba activate ...`, the terminal will first ask you to run `mamba init`. However, `mamba init` permanently alters the behavior of **JupyterLab**, so I don't recommend it. This is the only exception to the use of `mamba` and is specific to **OpenReproLab**.
+
+This "_my-env-name_" environment is personal and contains almost no packages. It cannot become a notebook kernel because it lacks the essential "_ipykernel_" package.
+
+> [!NOTE]
+> Run `mamba install ipykernel` to install the "_ipykernel_" package in the currently activated environment.
+
+After a few minutes at most, you should be able to use this environment as a kernel to run your notebooks.
+
+<images>
+
+Don't forget that this environment is almost empty. You'll need to install all the libraries you need, such as "_xarray_" or "_cartopy_".
+
+Once again, don't mix `python -m`, `pip`, `pipx` commands with `mamba` or `conda` commands. There's a very good chance that what you're looking to install exists in the **Conda** "_forge_", i.e. the **Conda**/**Mamba** package list.
+
+> [!NOTE]
+> Example 1: you need a Python library whose documentation recommends using `pip install lib-1`? There's a very good chance that `mamba install lib-1` will install the same package, or perhaps `mamba install lib_1` - check it out on the Web!
+
+> [!NOTE]
+> Example 2: You need the `curl` system command? Then `mamba install curl` will let you use it in a terminal! No need to run `apt install curl`.
 
 ## Documenting your environment in jupyter notebook
 
