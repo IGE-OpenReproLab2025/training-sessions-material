@@ -52,7 +52,7 @@ Example 2: You need the “curl” system command? Then “mamba install curl”
 
 You can do it by hand with markdown syntax in a cell :
 
-<p align=center><img width="127" alt="markdown" src="pics/markdown.png" /></p>
+<p align=center><img width="800" alt="markdown" src="pics/markdown.png" /></p>
 
 
 
