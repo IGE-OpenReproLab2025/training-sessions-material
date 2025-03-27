@@ -55,4 +55,10 @@ You can do it by hand with markdown syntax in a cell :
 <p align=center><img width="800" alt="markdown" src="pics/markdown.png" /></p>
 
 
+The library watermak allows you to do it automatically :
+
+<p align=center><img width="800" alt="markdown" src="pics/watermark.png" /></p>
+
+
+
 
