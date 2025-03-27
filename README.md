@@ -23,8 +23,7 @@ The expected program is :
   - checking if everyone is up to speed, welcoming newcomers
  
 - **Session 4 - Environnments** (March 27th)
-  - conda/pip install
-  - environments
+  - [Installation of packages and environment](python-environments-basics.md)
  
 - **Session 5 - Code modularization in Python** (April 3rd)
   - Functions, modules and the basics of software packaging* [Jordi ?]
