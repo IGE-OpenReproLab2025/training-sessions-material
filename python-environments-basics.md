@@ -8,7 +8,22 @@
  - documenting you environment in Jupyter notebook
 
 ## How to install new packages 
-(JLS)
+
+Common tools used for Python package installation :
+
+  - [pip](https://pip.pypa.io/en/stable/user_guide/)
+  - [venv](https://docs.python.org/3/tutorial/venv.html)
+  - [virtualenv](https://virtualenv.pypa.io/en/latest/)
+  - [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/index.html)
+  - [mamba](https://mamba.readthedocs.io/en/latest/index.html)
+
+We recommend you stick with one package manager to avoid [conflicts](https://xkcd.com/1987/)
+As mamba is already installed on the jupyterhub it is the obvious choice for OpenReproLab
+
+An example :
+
+<p align=center><img width="800" alt="markdown" src="pics/mamba-install.png" /></p>
+
 
 ## What are environments and why we need them
 (JLS)
