@@ -103,7 +103,7 @@ In your **JupyterLab** online, the default **Pangeo** "_notebook_" environment c
 mamba create -n my-env-name # To create a new environment that will exist throughout your next sessions
 ```
 
-You then need to "_activate_" this new **Mamba** environment to be able to use its packages. Activation is not automatic when a new terminal is opened, so you may need to activate it if necessary.
+You then need to "_activate_" this new **Mamba** environment to be able to use its packages. Activation is not automatic when a new terminal is opened, so you may need to do it if necessary.
 
 ```bash
 conda activate my-env-name # To activate another environment
@@ -122,7 +122,7 @@ After a few minutes at most, you should be able to use this environment as a ker
 
 <images>
 
-Don't forget that this environment is almost empty. You'll need to install all the libraries you need, such as "_xarray_" or "_cartopy_".
+Don't forget that this environment is almost empty. You may need to install all the necessary libraries again, such as "_xarray_" or "_cartopy_".
 
 Once again, don't mix `python -m`, `pip`, `pipx` commands with `mamba` or `conda` commands. There's a very good chance that what you're looking to install exists in the **Conda** "_forge_", i.e. the **Conda**/**Mamba** package list.
 
