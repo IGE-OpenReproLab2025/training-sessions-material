@@ -22,7 +22,7 @@ The expected program is :
 - **Session 3 - Check-point #1 : on GitHub repositories** (March 20th, 1pm)
   - checking if everyone is up to speed, welcoming newcomers
  
-- **Session 4 - Environnments** (March 27th)
+- **Session 4 - Environments** (March 27th)
   - [Installation of packages and environment](python-environments-basics.md)
  
 - **Session 5 - Code modularization in Python** (April 3rd)
