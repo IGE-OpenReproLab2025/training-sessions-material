@@ -86,7 +86,7 @@ mamba info # To learn more about your currently loaded environment
 
 When you open a notebook via the **JupyterLab** launcher, there is a choice available: "_Python 3 (ipykernel)_" kernel (see below).
 
-<p align=center><img width="127" alt="Capture d’écran 2025-03-26 à 16 24 26" src="https://github.com/user-attachments/assets/1e7e4fb0-03eb-4def-a972-55fae9918d0d" /></p>
+<p align=center><img width="127" alt="jupyterlab default environment" src="https://github.com/user-attachments/assets/1e7e4fb0-03eb-4def-a972-55fae9918d0d" /></p>
 
 A "_kernel_" is a **Mamba** environment ready to be used in a notebook. Here, the _"Python 3 (ipykernel)"_ kernel corresponds to the **Pangeo** "_notebook_" environment.
 
@@ -120,7 +120,10 @@ mamba install ipykernel # To install the package in the currently activated envi
 
 After a few minutes at most, you should be able to use this environment as a kernel to run your notebooks.
 
-<images>
+
+<p align=center><img width="364" alt="jupyterlab new environment" src="https://github.com/user-attachments/assets/2625d34e-456f-4a07-98d8-2b4727e6148a" /><img width="464" alt="kernel switch" src="https://github.com/user-attachments/assets/d38a853b-2883-4c71-b48b-4eab971a8d09" /></p>
+
+
 
 Don't forget that this environment is almost empty. You may need to install all the necessary libraries again, such as "_xarray_" or "_cartopy_".
 
