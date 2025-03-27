@@ -49,4 +49,10 @@ Example 1: you need a Python library whose documentation recommends using “pip
 Example 2: You need the “curl” system command? Then “mamba install curl” will let you use it in a terminal! No need to run “apt install curl”.
 
 ## Documenting your environment in jupyter notebook
-(AA)
+
+You can do it by hand with markdown syntax in a cell :
+
+<p align=center><img width="127" alt="markdown" src="pics/markdown.png" /></p>
+
+
+
