@@ -18,6 +18,7 @@ Common tools used for Python package installation :
   - [mamba](https://mamba.readthedocs.io/en/latest/index.html)
 
 We recommend you stick with one package manager to avoid [conflicts](https://xkcd.com/1987/)
+
 As mamba is already installed on the jupyterhub it is the obvious choice for OpenReproLab
 
 An example :
@@ -26,7 +27,40 @@ An example :
 
 
 ## What are environments and why we need them
-(JLS)
+
+Sometimes one application needs a particular version of a package but a different application needs another version. Since the requirements conflict, installing either version will leave one application unable to run. This situation can be resolved by using virtual environments. A virtual environment is a semi-isolated Python environment that allows packages to be installed for use by a particular application or for a particular project.
+
+
+ - fresh environment creation : ```mamba create -n nameofmyenv <list of packages>```
+ - cloning an existing environment : ```conda create --name myclone --clone myenv``` (example base environment on the jupyterhub)
+ - creation from a requirement file : ```conda env create -f environment.yml```
+
+with environment.yml :
+
+```bash
+name: atlaslice
+channels:
+  - conda-forge
+  - pypi
+  - defaults
+
+dependencies:
+  - python=3.11
+  - xarray=2023.6.0
+  - numpy=1.25.0
+  - scipy=1.13.0
+  - numba
+  - pandas=1.5.3
+  - matplotlib=3.7.1
+  - netcdf4=1.6.2
+  - jupyter=1.0.0
+  - ipython=8.12.0
+  - ipykernel=6.19.2
+  - ffmpeg=4.2.2
+  - dask=2023.6.0
+  - cmocean=3.0.3
+  - cartopy=0.21.1
+```
 
 ## The environment available on our Jupyterhub
 Managing software environments can sometimes become complex and confusing. To avoid recurring problems, use a single dependency manager. This applies to all languages!
@@ -62,6 +96,8 @@ A "_kernel_" is a **Mamba** environment ready to be used in a notebook. Here, th
 Example 1: you need a Python library whose documentation recommends using “pip install my-lib”? There's a very good chance that “mamba install my-lib” will install the same package, or perhaps “mamba install my_lib” - check it out on the Web!
 
 Example 2: You need the “curl” system command? Then “mamba install curl” will let you use it in a terminal! No need to run “apt install curl”.
+
+
 
 ## Documenting your environment in jupyter notebook
 
