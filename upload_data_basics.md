@@ -56,12 +56,27 @@ wget https://ige-meom-opendap.univ-grenoble-alpes.fr/thredds/fileServer/meomopen
 
 ## COPY TO IGE-CALCUL1
 
-If you are outside the lab or via WIFI : `ssh agalan@ige-ssh.u-ga.fr`
+IGE-calcul1 is a cluster accessible to anyone in the IGE
+
+If you are outside the lab or via WIFI, you need to connect first to ige-ssh: `ssh agalan@ige-ssh.u-ga.fr`
 
 Connect and configure your access to ige-calcul1 following the first steps of [this tutorial](https://ige-calcul.github.io/public-docs/docs/clusters/Ige/ige-calcul1.html)
 
-The mirror of your private-storage is located at `/mnt/summer/openreprolab/USER_GITHUB`
+A mirror of your private-storage that you have in the OpenReproLab cloud is located at `/mnt/summer/openreprolab/USER_GITHUB` on calcul1
 
-Then you can upload data from your personnal computer with : `rsync -rav MONDOSSIER  calcul1:/mnt/summer/openreprolab/USER_GITHUB/`
+Then you can upload data from your personnal computer with : `rsync -rav MONDOSSIER  calcul1:/mnt/summer/openreprolab/USER_GITHUB/` or from another place on calcul1 : `cp data /mnt/summer/openreprolab/USER_GITHUB/.`
+
+Be aware that you have different identities on the cloud and on calcul1 :
+  - on the cloud you are logued via your github account
+  - on ige-calcul1 you are logued via your agalan account
+
+That means that when you create a sub-directory in your private-storage on the cloud, you cannot write to it on calcul1 and conversly
+
+We suggest that you create two sub-directories :
+  - one from calcul1 : INPUTS-calcul1
+  - one from the cloud : OUTPUTS-cloud
+
+This way, in a notebook you will be able to read the files in INPUTS and write to OUTPUTS (choose the right names for your directories !)
+
 
 
