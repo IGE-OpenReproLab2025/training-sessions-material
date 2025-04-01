@@ -26,12 +26,12 @@ The expected program is :
   - [Installation of packages and environment](python-environments-basics.md)
  
 - **Session 5 - Code modularization in Python** (April 3rd)
-  - Functions, modules and the basics of software packaging [Jordi ?]
+  - Functions, modules and the basics of software packaging [Julien, Amaury, Mykael]
 
-- **Session 6 - Ckeck point #2 : on data workflow**
+- **Session 6 - Ckeck point #2 : on data workflow** (April 10th)
   - check if everyone is up to speed, discussing individual data workflow  
 
-- **Session 7 - Documentation and conservation** (April 10th)
+- **Session 7 - Documentation and conservation** (April 17th)
   - for data : meta data, readme, conventions, markdown, zenodo
   - for software : docstring, reathedoc, software heritage [Lucas B ?]
 
