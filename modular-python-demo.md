@@ -6,20 +6,20 @@ Start with functional code and apply incremental improvement to obtain modular P
 ## Before we start
 This document describes the main stages the demonstration will go through and the functional states of the code for each. It serves as a framework for the presenter and as a reminder for the students afterwards.
 
-Ideally, you should copy the first code snippet below and copy the “data/temperatures.csv” data required for its execution. Then, this starting example can be improved by going through the steps below, highlighting the interest of each change described below.
+Ideally, you should copy the first code snippet below and copy the “temperatures.csv” data required for its execution. Then, this starting example can be improved by going through the steps below, highlighting the interest of each change described below.
 
 ## The Nine Quantum Leaps
 1. Getting started with a functional notebook
 2. Break down code to make it more readable
-3. Make a few non-optimal functional additions
+3. Make a few unoptimal functional additions
 4. Abstract code into a function
 5. Add more functions
 6. Transform stateful functions into pure functions
 7. Move functions into a script
-8. Move script to subfolder
+8. Move script in subfolder
 9. Add a test
 
-## Our initial version
+## Getting started with a functional notebook
 
 We imagine that we assemble a working script from various StackOverflow recommendations and arrive at:
 
@@ -28,24 +28,52 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 num_measurements = 25
-
-# read data from file
 data = pd.read_csv("temperatures.csv", nrows=num_measurements)
 temperatures = data["Air temperature (degC)"]
-
-# compute statistics
 mean = sum(temperatures) / num_measurements
 
-# plot results
 plt.plot(temperatures, "r-")
 plt.axhline(y=mean, color="b", linestyle="--")
 plt.show()
-plt.savefig("25.png")
+plt.savefig("temperatures.png")
 plt.clf()
 ```
 
-## We add axis labels
+## Break down code to make it more readable
+Let's tidy things up a bit and divide the code into separate parts: imports at the top, variables next and finally a few commented code cells. Also move input data and output plots into separate folders.
 
+```python
+# Imports
+import pandas as pd
+from matplotlib import pyplot as plt
+```
+
+```python
+# Variables
+dataset_file = "data/temperatures.csv"
+data_column_name = "Air temperature (degC)"
+plots_folder = "plots"
+num_measurements = 25
+```
+
+```python
+# Processing
+data = pd.read_csv(dataset_file, nrows=num_measurements)
+temperatures = data[data_column_name]
+mean = sum(temperatures) / num_measurements
+```
+
+```python
+# Plotting
+plt.plot(temperatures, "r-")
+plt.axhline(y=mean, color="b", linestyle="--")
+plt.show()
+output_plot = os.path.join(plots_folder, f"{num_measurements}.png"
+plt.savefig(output_plot)
+plt.clf()
+```
+
+## Make a few unoptimal functional additions
 It's not the best placement but it works and later it will bite us (only the first plot will have labels) and we will improve it:
 
 ```diff
@@ -68,7 +96,7 @@ mean = sum(temperatures) / num_measurements
 plt.plot(temperatures, "r-")
 plt.axhline(y=mean, color="b", linestyle="--")
 plt.show()
-plt.savefig("25.png")
+plt.savefig(os.path.join(plots_folder, f"{num_measurements}.png")
 plt.clf()
 ```
 
