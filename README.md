@@ -26,7 +26,7 @@ The expected program is :
   - [Installation of packages and environment](python-environments-basics.md)
  
 - **Session 5 - Code modularization in Python** (April 3rd)
-  - Functions, modules and the basics of software packaging [Julien, Amaury, Mykael]
+  - [Functions, modules and the basics of software packaging](python-basics.md) [Julien, Amaury, Mykael]
 
 - **Session 6 - Ckeck point #2 : on data workflow** (April 10th)
   - check if everyone is up to speed, discussing individual data workflow  
