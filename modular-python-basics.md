@@ -48,8 +48,8 @@ A library is a python script published on the Internet in a package repository, 
 
 ## Daily routines
 
-## Interactive demonstration
-[It's this way.](modular-python-demo.md)
+## Interactive Session 5 part
+[A demonstration about how to improve incrementally a Python code](modular-python-demo.md)
 
 ## Conclusions and future perspectives
 
