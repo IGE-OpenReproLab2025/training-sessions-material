@@ -276,7 +276,6 @@ The notebook now contains only the very high-level instructions that are suffici
 Sometimes a python module can be found elsewhere on the system, like in a "modules" folder. Let's see how to import them if they're not in the same folder as your notebook. Move your `data_processing.py` into a new subfolder called `modules` and create an empty `__init__.py` file within too.
 
 ```python
-import sys
 import modules.data_processing as dapro
 
 for num_measurements in [25, 100, 500]:
