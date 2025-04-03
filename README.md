@@ -27,6 +27,7 @@ The expected program is :
  
 - **Session 5 - Code modularization in Python** (April 3rd)
   - [Functions, modules and the basics of software packaging](modular-python-basics.md) [Julien, Amaury, Mykael]
+  - [Interactive session about improving incrementally a Python code to make it modular](modular-python-demo.md) [Mykael]
 
 - **Session 6 - Ckeck point #2 : on data workflow** (April 10th)
   - check if everyone is up to speed, discussing individual data workflow  
