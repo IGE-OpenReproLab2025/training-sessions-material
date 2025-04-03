@@ -177,7 +177,7 @@ A quick glance at the "processing cell is all that's needed to know what the pro
 But these functions are “stateful”, i.e. they have side effects. They use variables that are outside their definition (such as “mean” and “num_measurements”, for example). It's a problem if, for example, we reuse one of these functions outside this notebook.
 
 ## v6 Transform stateful functions into pure functions
-"Pure" (or "Stateless") functions depends ONLY on their input parameters. Thanks to that, they can be reused anywhere, tested, parallelized and much more. Let's refactor these functions to make them pure (and a bit more generic by the way).
+"Pure" (or "Stateless") functions depend ONLY on their input parameters. Thanks to that, they can be reused anywhere, tested, parallelized and much more. Let's refactor these functions to make them pure (and a bit more generic by the way).
 
 ```python
 import pandas as pd
@@ -223,7 +223,7 @@ These functions can now be copy-pasted to a different notebook or project and th
 
 By staying in a notebook, a function can't be reused elsewhere without being copy-pasted. Because with several notebooks, we want to produce comparable results, we also want a single definition of our functions for the whole project.
 
-We now want a new Python file called `data_processing.py` in which we will move all our fonction definitions and their dependencies.
+We now want a new Python file called `data_processing.py` in which we will move all our function definitions and their dependencies.
 
 ```python
 import pandas as pd
@@ -273,7 +273,7 @@ The notebook now contains only the very high-level instructions that are suffici
 
 ## v8 Upgrade the module to a package
 
-Sometimes a python module can be found elsewhere on the system, like in a "modules" folder. Let's see how to import them if they're not in the same folder as your notebook. Move your `data_processing.py` into a new subfolder called `modules` and create an empty `__init__.py` file within too.
+Sometimes a python module can be found elsewhere on the system, like in a "modules" folder. Let's see how to import them if they're not in the same folder as your notebook. Move your `data_processing.py` into a new subfolder called `modules` and create an empty `__init__.py` file in the `modules` subfolder.
 
 ```python
 import modules.data_processing as dapro
@@ -302,7 +302,7 @@ From now on, if several of our notebooks need these functions, they are all defi
 - If the module becomes too long, it may be a good idea to add others and divide up the functions according to usage categories.
 
 ## Conclusion
-What we've just done is no longer just called “programming” but “developing”. It's about giving your code the right software structure to give it the essential quality that drives all the others: maintainability. A maintainable code is simple, manageable and adaptable. It is then reused, improved and can thus become increasingly efficient, generic and reliable.
+What we've just done is no longer just called “programming” but “developing”. It's about giving your code the right software structure to give it the essential quality that drives all the others: maintainability. Maintainable code is simple, manageable and adaptable. It is then reused, improved and can thus become increasingly efficient, generic and reliable.
 
 ## Perspectives
 Now that our functions are well separated, there are lots of other things we can do to improve them:
