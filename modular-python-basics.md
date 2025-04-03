@@ -3,7 +3,6 @@
 ## Introduction and motivation
 
 ## Functions
-
 Here's a Python function:
 
 ```python
@@ -28,11 +27,10 @@ A function breaks down code into smaller parts, making it less complex, more reu
 >   - if a function does more than one thing
 >   - if you have trouble naming a function
 > - use pure functions, i.e. functions that have no "state" and always return the same value with the same input
-> - avoid premature optimization
+> - avoid premature optimization, simplicity and clarity first and foremost
 > - simple is better than complex
 
 ## Scripts
-
 A Python script is a simple file .py which contains collection of functions. It behaves like a Python library, but must be imported from a local source.
 
 Grouping functions around themes or similiarities in scripts allows them to be reused even more widely in different parts of your project. This ensures the consistency of operations performed in different places.
@@ -45,14 +43,20 @@ Grouping functions around themes or similiarities in scripts allows them to be r
 > - group functions that work together or by theme
 
 ## Package or library
-
 A library is a python script published on the Internet in a package repository, such as PyPI or Conda. This makes it easy to share with anyone, and especially between several projects. 
 
 > [!TIP]
 > - documenting is not an option anymore (and never was)
 > - it's probably time to test the functions
-> - if the optimization neded is nedded, measure, do not guess
+> - if optimization of functions is nedded, measure, do not guess
 
 ## Daily routines
 
+## Interactive demonstration
+[It's this way.](modular-python-demo.md)
+
 ## Conclusions and future perspectives
+
+## Acknowledgment and further materials
+- https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/
+- https://coderefinery.github.io/modular-type-along/
