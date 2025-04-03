@@ -52,7 +52,7 @@ A library is a python script published on the Internet in a package repository, 
 
 ## Daily workflow
 
-As a start, we recommand that you start storing your scripts in your *labbook* GitHub repo and share them with yoru collabioratos in your *collaboration* GitHub repo. By the end of the project these tools will be delivered in the *project* GitHub repo. We will discuss later how to do this optimally.  
+As a start, we recommand that you start storing your scripts in your *labbook* GitHub repo and share them with your collaborators in your *collaboration* GitHub repo. By the end of the project these tools will be delivered in the *project* GitHub repo. We will discuss later how to do this optimally.  
 
 ## Interactive Session 5 part
 [A demonstration about how to improve incrementally a Python code](modular-python-demo.md)
