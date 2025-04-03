@@ -2,6 +2,10 @@
 
 ## Introduction and motivation
 
+The goal of this session is to provide you with the basic tools to organize the code you develop during your internship. You will deliver this code in a GitHub repository that will document your project.
+
+By following the advice given today, you will make your results more robust (by minimizing the risk of errors) and increase their visibility (by maximizing the chances that your work can be reused later).
+
 ## Functions
 Here's a Python function:
 
