@@ -8,7 +8,7 @@ This document describes the main stages the demonstration will go through and th
 
 Ideally, you should copy the first code snippet below and copy the “temperatures.csv” data required for its execution. Then, this starting example can be improved by going through the steps below, highlighting the interest of each change described below.
 
-There also a complete git repository to track each workspace state with tags: https://github.com/IGE-OpenReproLab2025/modular-python-code-demo
+There is also a complete git repository to track each workspace state with tags: https://github.com/IGE-OpenReproLab2025/modular-python-code-demo
 
 ## The Eight Quantum Leaps
 1. Getting started with a functional notebook
