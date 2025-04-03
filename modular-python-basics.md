@@ -53,6 +53,14 @@ A library is a python script published on the Internet in a package repository, 
 
 ## Conclusions and future perspectives
 
+Monsieur Jourdain, in Molière’s Le Bourgeois Gentilhomme, was unknowingly writing prose. During your internship so far, you have been practicing software design without realizing it.
+
+In this session, we have defined the key concepts and practical steps that will allow you to build robust tools throughout your internship, improving the reproducibility of your results.
+
+By following this approach, you will deliver a set of notebooks alongside your project, based on libraries that will gather the functions you have developed.
+
+Later, we will explore how to make these libraries reusable beyond your project.
+
 ## Acknowledgment and further materials
 - https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/
 - https://coderefinery.github.io/modular-type-along/
