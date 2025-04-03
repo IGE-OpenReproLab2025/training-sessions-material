@@ -30,29 +30,30 @@ A function breaks down code into smaller parts, making it less complex, more reu
 > - avoid premature optimization, simplicity and clarity first and foremost
 > - simple is better than complex
 
-## Scripts
-A Python script is a simple file .py which contains collection of functions. It behaves like a Python library, but must be imported from a local source.
+## Modules (sometimes called "scripts")
+A Python module is a simple file .py which contains collection of functions. It behaves like a Python library, but must be imported from a local source.
 
-Grouping functions around themes or similiarities in scripts allows them to be reused even more widely in different parts of your project. This ensures the consistency of operations performed in different places.
+Grouping functions around themes or similiarities in modules allows them to be reused even more widely in different parts of your project. This ensures the consistency of operations performed in different places.
 
 > [!TIP]
-> - a script is separate from its use, so it's even more important to document it properly
+> - a module is separate from its use, so it's even more important to document it properly
 > - expose the "what", hide the "how"
-> - only include pure functions in a script
-> - like functions, creating several scripts is better than one big one
+> - only include pure functions in a module
+> - like functions, creating several modules is better than one big one
 > - group functions that work together or by theme
 
-## Package or library
-A library is a python script published on the Internet in a package repository, such as PyPI or Conda. This makes it easy to share with anyone, and especially between several projects. 
+## Packages (often called "libraries")
+A package is a python module published on the Internet in a package repository, such as PyPI or Conda. This makes it easy to share with anyone, and especially between several projects. It contains at least an empty `__init__.py` file to declare that the module as a real package.
 
 > [!TIP]
+> - keep the `__init__.py` file minimal, an empty one is perfectly fine
 > - documenting is not an option anymore (and never was)
 > - it's probably time to test the functions
 > - if optimization of functions is nedded, measure, do not guess
 
 ## Daily workflow
 
-As a start, we recommand that you start storing your scripts in your *labbook* GitHub repo and share them with your collaborators in your *collaboration* GitHub repo. By the end of the project these tools will be delivered in the *project* GitHub repo. We will discuss later how to do this optimally.  
+As a start, we recommand that you start storing your module in your *labbook* GitHub repo and share them with your collaborators in your *collaboration* GitHub repo. By the end of the project these tools will be delivered in the *project* GitHub repo. We will discuss later how to do this optimally.  
 
 ## Interactive Session 5 part
 [A demonstration about how to improve incrementally a Python code](modular-python-demo.md)
