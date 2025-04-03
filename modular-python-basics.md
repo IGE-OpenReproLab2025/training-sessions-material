@@ -26,7 +26,7 @@ A function breaks down code into smaller parts, making it less complex, more reu
 > [!TIP]
 > - build your code around functions
 > - break down your code into more functions if, too indented, too long, too complex, too weird
-> - use pure functions, i.e. functions that have no "state" and always return the same value with the same input
+> - use [pure functions](https://cicero.xyz/v3/remark/0.14.0/github.com/coderefinery/modular-code-development/master/talk.md/#8), i.e. functions that don't keep a state between executions and always return the same output with the same input
 > - avoid premature optimization, simplicity and clarity first and foremost
 > - simple is better than complex
 
