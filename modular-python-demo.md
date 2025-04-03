@@ -8,19 +8,17 @@ This document describes the main stages the demonstration will go through and th
 
 Ideally, you should copy the first code snippet below and copy the “temperatures.csv” data required for its execution. Then, this starting example can be improved by going through the steps below, highlighting the interest of each change described below.
 
-## The Nine Quantum Leaps
+## The Eight Quantum Leaps
 1. Getting started with a functional notebook
-2. Break down code to make it more readable
-3. Make a few unoptimal functional additions
+2. Make a few unoptimal additions
+3. Avoiding duplication with a loop
 4. Abstract code into a function
 5. Add more functions
 6. Transform stateful functions into pure functions
 7. Move functions into a script
 8. Move script in subfolder
-9. Add a test
 
-## Getting started with a functional notebook
-
+## v1 Getting started with a functional notebook
 We imagine that we assemble a working script from various StackOverflow recommendations and arrive at:
 
 ```python
@@ -28,102 +26,83 @@ import pandas as pd
 from matplotlib import pyplot as plt
 
 num_measurements = 25
+
+# Read data from file
 data = pd.read_csv("temperatures.csv", nrows=num_measurements)
 temperatures = data["Air temperature (degC)"]
+
+# Compute statistics
 mean = sum(temperatures) / num_measurements
 
-plt.plot(temperatures, "r-")
-plt.axhline(y=mean, color="b", linestyle="--")
-plt.show()
-plt.savefig("temperatures.png")
-plt.clf()
-```
-
-## Break down code to make it more readable
-Let's tidy things up a bit and divide the code into separate parts: imports at the top, variables next and finally a few commented code cells. Also move input data and output plots into separate folders.
-
-```python
-# Imports
-import pandas as pd
-from matplotlib import pyplot as plt
-```
-
-```python
-# Variables
-dataset_file = "data/temperatures.csv"
-data_column_name = "Air temperature (degC)"
-plots_folder = "plots"
-num_measurements = 25
-```
-
-```python
-# Processing
-data = pd.read_csv(dataset_file, nrows=num_measurements)
-temperatures = data[data_column_name]
-mean = sum(temperatures) / num_measurements
-```
-
-```python
 # Plotting
 plt.plot(temperatures, "r-")
 plt.axhline(y=mean, color="b", linestyle="--")
 plt.show()
-output_plot = os.path.join(plots_folder, f"{num_measurements}.png"
-plt.savefig(output_plot)
+plt.savefig("25.png")
 plt.clf()
 ```
 
-## Make a few unoptimal functional additions
-It's not the best placement but it works and later it will bite us (only the first plot will have labels) and we will improve it:
+## v2 Make a few unoptimal functional additions
+New phase of adding features to the code: we also want a plot for 100 measurements and add a legend. Let's do this naively and see what pitfalls we can already fall into.
 
-```diff
+```python
 import pandas as pd
 from matplotlib import pyplot as plt
-
-plt.xlabel("measurements")
-plt.ylabel("air temperature (deg C)")
 
 num_measurements = 25
 
-# read data from file
+# Read data from file
 data = pd.read_csv("temperatures.csv", nrows=num_measurements)
 temperatures = data["Air temperature (degC)"]
 
-# compute statistics
+# Compute statistics
 mean = sum(temperatures) / num_measurements
 
-# plot results
+# Plotting
 plt.plot(temperatures, "r-")
 plt.axhline(y=mean, color="b", linestyle="--")
 plt.show()
-plt.savefig(os.path.join(plots_folder, f"{num_measurements}.png")
+plt.savefig("25.png")
+plt.clf()
+
+num_measurements = 100
+
+# Read data from file
+data = pd.read_csv("temperatures.csv", nrows=num_measurements)
+temperatures = data["Air temperature (degC)"]
+
+# Compute statistics
+mean = sum(temperatures) / num_measurements
+
+# Plotting
+plt.plot(temperatures, "r-")
+plt.axhline(y=mean, color="b", linestyle="--")
+plt.show()
+plt.savefig("100.png")
 plt.clf()
 ```
 
-Once we get this working for 25 measurements, our task changes to also plot the first 100 and the first 500 measurements in two additional plots.
+Problems:
+- The code has been duplicated, which is a bad sign if we want to add more plots.
+- We also need to remember to change the “num_measurements” variable and change the plot output name each time.
+- (bonus) The input file is reread each time a new plot is made, wasting computing resources and adding time processing.
 
-## Plotting also 100 and 500 measurements
-
-- Next idea is perhaps code duplication.
-- Then a for-loop to iterate over `[25, 100, 500]`:
+## v3 Avoiding duplication with a loop
+Let's add a for loop to at least avoid code duplication and format the name of the output file.
 
 ```python
 import pandas as pd
 from matplotlib import pyplot as plt
 
-plt.xlabel("measurements")
-plt.ylabel("air temperature (deg C)")
-
 for num_measurements in [25, 100, 500]:
-
-    # read data from file
+    # Read data from file
     data = pd.read_csv("temperatures.csv", nrows=num_measurements)
     temperatures = data["Air temperature (degC)"]
-
-    # compute statistics
+    
+    # Compute statistics
     mean = sum(temperatures) / num_measurements
-
-    # plot results
+    
+    # Plotting
     plt.plot(temperatures, "r-")
     plt.axhline(y=mean, color="b", linestyle="--")
     plt.show()
@@ -131,229 +110,204 @@ for num_measurements in [25, 100, 500]:
     plt.clf()
 ```
 
-
-## Abstracting the plotting part into a function
+## v4 Abstracting the plotting part into a function
+If we want to compare plots with different processing, we'll have to copy and paste the whole loop, and end up duplicating code again. Let's avoid this by adding a new layer of abstraction to this code with a function that will handle only the plotting part.
 
 ```python
 import pandas as pd
 from matplotlib import pyplot as plt
 
-plt.xlabel("measurements")
-plt.ylabel("air temperature (deg C)")
-
-
 def plot_temperatures(temperatures):
+    plt.xlabel("measurements")
+    plt.ylabel("air temperature (deg C)")
     plt.plot(temperatures, "r-")
     plt.axhline(y=mean, color="b", linestyle="--")
     plt.show()
     plt.savefig(f"{num_measurements}.png")
     plt.clf()
 
-
 for num_measurements in [25, 100, 500]:
-
-    # read data from file
+    # Read data from file
     data = pd.read_csv("temperatures.csv", nrows=num_measurements)
     temperatures = data["Air temperature (degC)"]
-
-    # compute statistics
+    
+    # Compute statistics
     mean = sum(temperatures) / num_measurements
-
-    # plot results
-    #   plt.plot(temperatures, 'r-')
-    #   plt.axhline(y=mean, color='b', linestyle='--')
-    #   plt.show()
-    #   plt.savefig(f'{num_measurements}.png')
-    #   plt.clf()
+    
     plot_temperatures(temperatures)
 ```
 
-- Discuss what we expect before running it (some will expect this not to work because variables seem undefined).
-- Then try it out (it actually works).
-- Discuss problems with this solution (what if we copy-paste the function to a different file?).
+Can you also see that this way you'll be sure to apply the same treatment every time you reuse this function somewhere?
 
-The point of this step was that abstracting code into functions can be really good for reusability but just the fact that we created a function does not mean that the function is reusable since in this case it depends on a variable defined outside the function and hence there are side-effects.
-
-## Small improvements
-
-- Abstracting into more functions.
-- Notice how the comments got redundant:
+## v5 Add more functions
+Let's transform all processing operations into functions.
 
 ```python
 import pandas as pd
 from matplotlib import pyplot as plt
 
-
-def plot_data(data, xlabel, ylabel):
-    plt.plot(data, "r-")
-    plt.xlabel(xlabel)
-    plt.ylabel(ylabel)
+def plot_temperatures(temperatures):
+    plt.xlabel("measurements")
+    plt.ylabel("air temperature (deg C)")
+    plt.plot(temperatures, "r-")
     plt.axhline(y=mean, color="b", linestyle="--")
     plt.show()
     plt.savefig(f"{num_measurements}.png")
     plt.clf()
 
-
-def compute_statistics(data):
-    mean = sum(data) / num_measurements
-    return mean
-
-
-def read_data(file_name, column):
-    data = pd.read_csv(file_name, nrows=num_measurements)
+def get_data(file, column):
+    data = pd.read_csv(file, nrows=num_measurements)
     return data[column]
 
+def compute_mean(data):
+    return sum(data) / num_measurements
 
 for num_measurements in [25, 100, 500]:
-
-    temperatures = read_data(
-        file_name="temperatures.csv", column="Air temperature (degC)"
-    )
-
-    mean = compute_statistics(temperatures)
-
-    plot_data(
-        data=temperatures, xlabel="measurements", ylabel="air temperature (deg C)"
-    )
+    temperatures = get_data("temperatures.csv", "Air temperature (degC)")
+    
+    mean = compute_mean(temperatures)
+    
+    plot_temperatures(temperatures)
 ```
 
+A quick glance at the "processing cell is all that's needed to know what the processing steps are, which is very clear to any reader.
 
-Discuss what would happen if we copy-paste the functions to another project (these functions are stateful/time-dependent).
+But these functions are “stateful”, i.e. they have side effects. They use variables that are outside their definition (such as “mean” and “num_measurements”, for example). It's a problem if, for example, we reuse one of these functions outside this notebook.
 
-Emphasize how stateful functions and order of execution in Jupyter notebooks can produce unexpected results and explain why we motivate to rerun all cells before sharing the notebook.
-
-## Towards functions without side-effects
-
-Improve to more stateless functions:
+## v6 Transform stateful functions into pure functions
+"Pure" (or "Stateless") functions depends ONLY on their input parameters. Thanks to that, they can be reused anywhere, tested, parallelized and much more. Let's refactor these functions to make them pure (and a bit more generic by the way).
 
 ```python
 import pandas as pd
 from matplotlib import pyplot as plt
 
-
-def plot_data(data, mean, xlabel, ylabel, file_name):
-    plt.plot(data, "r-")
+def plot_data(data, mean, xlabel, ylabel, output_plot_file):
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    plt.plot(data, "r-")
     plt.axhline(y=mean, color="b", linestyle="--")
     plt.show()
-    plt.savefig(file_name)
+    plt.savefig(output_plot_file)
     plt.clf()
 
-
-def compute_mean(data):
-    mean = sum(data) / len(data)
-    return mean
-
-
-def read_data(file_name, nrows, column):
-    data = pd.read_csv(file_name, nrows=nrows)
+def get_data(file, column, num_rows):
+    data = pd.read_csv(file, nrows=num_rows)
     return data[column]
 
+def compute_mean(data):
+    return sum(data) / len(data)
 
 for num_measurements in [25, 100, 500]:
-
-    temperatures = read_data(
-        file_name="temperatures.csv",
-        nrows=num_measurements,
+    temperatures = get_data(
+        file="temperatures.csv",
         column="Air temperature (degC)",
+        num_rows=num_measurements
     )
-
-    mean = compute_mean(temperatures)
-
+    
+    temperature_mean = compute_mean(temperatures)
+    
     plot_data(
         data=temperatures,
-        mean=mean,
+        mean=temperature_mean,
         xlabel="measurements",
-        ylabel="air temperature (deg C)",
-        file_name=f"{num_measurements}.png",
+        ylabel="Air temperature (deg C)",
+        output_plot_file=f"{plots_folder}{num_measurements}.png"
     )
 ```
 
 These functions can now be copy-pasted to a different notebook or project and they will still work.
 
-## Move from notebook to script
+## v7 Move functions into a script
 
-Adding unit tests is often the moment when notebook is not the right fit anymore.
+By staying in a notebook, a function can't be reused elsewhere without being copy-pasted. Because with several notebooks, we want to produce comparable results, we also want a single definition of our functions for the whole project.
 
-But before we add tests:
-
-- "File" -> "Save and Export Notebook As ..." -> "Executable Script"
-- `git init` and commit the working version.
-- Add `requirements.txt` and motivate how that can be useful to have later.
-
-As we continue from here, **create commits after meaningful changes** and later also share the repository with learners. This nicely connects to other lessons of the workshop.
-
-## Unit tests
-
-Design code for testing.
-
-- Move the main scope code into a main function.
-- Discuss where to add a test and add a test to the statistics function:
+We now want a new Python file called "data_processing.py" in which we will move all our fonction definitions and their dependencies.
 
 ```python
 import pandas as pd
 from matplotlib import pyplot as plt
-import pytest
 
-
-def plot_data(data, mean, xlabel, ylabel, file_name):
-    plt.plot(data, "r-")
+def plot_data(data, mean, xlabel, ylabel, output_plot_file):
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
+    plt.plot(data, "r-")
     plt.axhline(y=mean, color="b", linestyle="--")
-    #   plt.show()
-    plt.savefig(file_name)
+    plt.show()
+    plt.savefig(output_plot_file)
     plt.clf()
 
-
-def compute_mean(data):
-    mean = sum(data) / len(data)
-    return mean
-
-
-def test_compute_mean():
-    result = compute_mean([1.0, 2.0, 3.0, 4.0])
-    assert result == pytest.approx(2.5)
-
-
-def read_data(file_name, nrows, column):
-    data = pd.read_csv(file_name, nrows=nrows)
+def get_data(file, column, num_rows):
+    data = pd.read_csv(file, nrows=num_rows)
     return data[column]
 
-
-def main():
-    for num_measurements in [25, 100, 500]:
-
-        temperatures = read_data(
-            file_name="temperatures.csv",
-            nrows=num_measurements,
-            column="Air temperature (degC)",
-        )
-
-        mean = compute_mean(temperatures)
-
-        plot_data(
-            data=temperatures,
-            mean=mean,
-            xlabel="measurements",
-            ylabel="air temperature (deg C)",
-            file_name=f"{num_measurements}.png",
-        )
-
-
-if __name__ == "__main__":
-    main()
+def compute_mean(data):
+    return sum(data) / len(data)
 ```
 
+It behaves and handles almost like a classic mamba/conda dependency. So we're going to greatly simplify the temperature plotting notebook.
 
-## Split long script into modules
+```python
+import data_processing as dapro
 
-- Discuss how you would move some functions out and organize them into separate modules which can be imported to other projects: For instance `compute_mean` can be moved to `statistics.py`.
-- Discuss naming.
-- Discuss interface design.
+for num_measurements in [25, 100, 500]:
+    temperatures = dapro.get_data(
+        file="temperatures.csv",
+        column="Air temperature (degC)",
+        num_rows=num_measurements
+    )
+    
+    temperature_mean = dapro.compute_mean(temperatures)
+    
+    dapro.plot_data(
+        data=temperatures,
+        mean=temperature_mean,
+        xlabel="measurements",
+        ylabel="Air temperature (deg C)",
+        output_plot_file=f"{num_measurements}.png"
+    )
+```
 
-## Summarize in the collaborative document
+The notebook now contains only the very high-level instructions that are sufficient to understand the general idea of the treatment applied to them. Separated in this way, both your functions and your notebook are much clearer, and reuse is greatly simplified.
 
-- Now return to initial questions on the collaborative document and discuss questions and comments. If there is time left, there are additional questions and exercises.
-- It is easier and more fun to teach this as a pair with somebody else where one person can type and the other person helps watching the questions and commends and relays them to the co-instructor.
+## v8 Move scripts in subfolder
+
+Sometimes a python script file can be found elsewhere on the system. Let's see how to import them if they're not in the same folder as your notebook. Move your "data_processing.py" into a new subfolder called "scripts" at the root of your project.
+
+```python
+import sys
+sys.path.append("./scripts")
+
+import data_processing as dapro
+
+for num_measurements in [25, 100, 500]:
+    temperatures = dapro.get_data(
+        file="temperatures.csv",
+        column="Air temperature (degC)",
+        num_rows=num_measurements
+    )
+    
+    temperature_mean = dapro.compute_mean(temperatures)
+    
+    dapro.plot_data(
+        data=temperatures,
+        mean=temperature_mean,
+        xlabel="measurements",
+        ylabel="Air temperature (deg C)",
+        output_plot_file=f"{num_measurements}.png"
+    )
+```
+
+From now on, if several of our notebooks need these functions, they are all defined here.
+- We can add parameters to make them more generic (i.e. able to handle more situations).
+- If they become too long, it's best to cut them up and simplify them into smaller parts.
+- If the script file becomes too long, it may be a good idea to add others and divide up the functions according to usage categories.
+
+## Conclusion
+What we've just done is no longer just called “programming” but “developing”. It's about giving your code the right software structure to give it the essential quality that drives all the others: maintainability. A maintainable code is simple, manageable and adaptable. It is then reused, improved and can thus become increasingly efficient, generic and reliable.
+
+## Perspectives
+Now that our functions are well separated, there are lots of other things we can do to improve them:
+- modules, to bring together several scripts in a single library
+- packages, to make modules available to the whole world and install them anywhere easily with `mamba install`.
+- tests, to make code more reliable and resistant to modifications, perfect for improving it without breaking anything
+- docstrings and typing, to make code more understandable and accessible thanks to a rich documentation
