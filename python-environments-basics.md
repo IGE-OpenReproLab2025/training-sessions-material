@@ -102,6 +102,11 @@ In your **JupyterLab** online, the default **Pangeo** "_notebook_" environment c
 ```bash
 mamba create -n my-env-name # To create a new environment that will exist throughout your next sessions
 ```
+It is also possible to indicate the python version, useful in case of compatibilty with old softwares using old version of python 
+
+```bash
+mamba create -n my-env-name python=3.8 # To create a new environment with a specific version of python , here 3.8
+```
 
 You then need to "_activate_" this new **Mamba** environment to be able to use its packages. Activation is not automatic when a new terminal is opened, so you may need to do it if necessary.
 
@@ -116,6 +121,12 @@ This "_my-env-name_" environment is personal and contains almost no packages. It
 
 ```bash
 mamba install ipykernel # To install the package in the currently activated environment
+```
+
+You can give it a name like "My first Env" that will be displayed
+
+```bash
+python -m ipykernel install --name my-env-name --user --display-name "My first Env"
 ```
 
 After a few minutes at most, you should be able to use this environment as a kernel to run your notebooks.
