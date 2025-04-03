@@ -21,11 +21,7 @@ A function breaks down code into smaller parts, making it less complex, more reu
 
 > [!TIP]
 > - build your code around functions
-> - break down your code into more functions
->   - if you have too many indentation levels
->   - if a function becomes too long
->   - if a function does more than one thing
->   - if you have trouble naming a function
+> - break down your code into more functions if, too indentend, too long, too complex, too weird
 > - use pure functions, i.e. functions that have no "state" and always return the same value with the same input
 > - avoid premature optimization, simplicity and clarity first and foremost
 > - simple is better than complex
