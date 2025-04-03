@@ -43,7 +43,7 @@ Grouping functions around themes or similiarities in modules allows them to be r
 > - group functions that work together or by theme
 
 ## Packages (often called "libraries")
-A package is a python module published on the Internet in a package repository, such as PyPI or Conda. This makes it easy to share with anyone, and especially between several projects. It contains at least an empty `__init__.py` file to declare that the module as a real package.
+A package is a python module published on the Internet in a package repository, such as PyPI or Conda. This makes it easy to share with anyone, and especially between several projects. It contains at least an empty `__init__.py` file to declare that the module is a real package.
 
 > [!TIP]
 > - keep the `__init__.py` file minimal, an empty one is perfectly fine
