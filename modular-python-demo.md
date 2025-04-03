@@ -311,3 +311,6 @@ Now that our functions are well separated, there are lots of other things we can
 - packages, to make modules available to the whole world and install them anywhere easily with `mamba install`.
 - tests, to make code more reliable and resistant to modifications, perfect for improving it without breaking anything
 - docstrings and typing, to make code more understandable and accessible thanks to a rich documentation
+
+## Acknowledgements
+This work is largely inspired by CodeRefinery: https://github.com/coderefinery/modular-type-along
