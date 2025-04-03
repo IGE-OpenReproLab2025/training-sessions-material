@@ -17,8 +17,8 @@ There is also a complete git repository to track each workspace state with tags:
 4. Abstract code into a function
 5. Add more functions
 6. Transform stateful functions into pure functions
-7. Move functions into a script
-8. Move script in subfolder
+7. Move functions into a module
+8. Upgrade the module to a package
 
 ## v1 Getting started with a functional notebook
 We imagine that we assemble a working script from various StackOverflow recommendations and arrive at:
@@ -219,11 +219,11 @@ for num_measurements in [25, 100, 500]:
 
 These functions can now be copy-pasted to a different notebook or project and they will still work.
 
-## v7 Move functions into a script
+## v7 Move functions into a module
 
 By staying in a notebook, a function can't be reused elsewhere without being copy-pasted. Because with several notebooks, we want to produce comparable results, we also want a single definition of our functions for the whole project.
 
-We now want a new Python file called "data_processing.py" in which we will move all our fonction definitions and their dependencies.
+We now want a new Python file called `data_processing.py` in which we will move all our fonction definitions and their dependencies.
 
 ```python
 import pandas as pd
@@ -271,15 +271,13 @@ for num_measurements in [25, 100, 500]:
 
 The notebook now contains only the very high-level instructions that are sufficient to understand the general idea of the treatment applied to them. Separated in this way, both your functions and your notebook are much clearer, and reuse is greatly simplified.
 
-## v8 Move scripts in subfolder
+## v8 Upgrade the module to a package
 
-Sometimes a python script file can be found elsewhere on the system. Let's see how to import them if they're not in the same folder as your notebook. Move your "data_processing.py" into a new subfolder called "scripts" at the root of your project.
+Sometimes a python module can be found elsewhere on the system, like in a "modules" folder. Let's see how to import them if they're not in the same folder as your notebook. Move your `data_processing.py` into a new subfolder called `modules` and create an empty `__init__.py` file within too.
 
 ```python
 import sys
-sys.path.append("./scripts")
-
-import data_processing as dapro
+import modules.data_processing as dapro
 
 for num_measurements in [25, 100, 500]:
     temperatures = dapro.get_data(
@@ -302,17 +300,17 @@ for num_measurements in [25, 100, 500]:
 From now on, if several of our notebooks need these functions, they are all defined here.
 - We can add parameters to make them more generic (i.e. able to handle more situations).
 - If they become too long, it's best to cut them up and simplify them into smaller parts.
-- If the script file becomes too long, it may be a good idea to add others and divide up the functions according to usage categories.
+- If the module becomes too long, it may be a good idea to add others and divide up the functions according to usage categories.
 
 ## Conclusion
 What we've just done is no longer just called “programming” but “developing”. It's about giving your code the right software structure to give it the essential quality that drives all the others: maintainability. A maintainable code is simple, manageable and adaptable. It is then reused, improved and can thus become increasingly efficient, generic and reliable.
 
 ## Perspectives
 Now that our functions are well separated, there are lots of other things we can do to improve them:
-- modules, to bring together several scripts in a single library
-- packages, to make modules available to the whole world and install them anywhere easily with `mamba install`.
+- modules, can be divided into theme-based submodules and enhanced
+- packages, publish them to package repositories like PyPI or Conda and install them anywhere easily with `mamba install`.
 - tests, to make code more reliable and resistant to modifications, perfect for improving it without breaking anything
-- docstrings and typing, to make code more understandable and accessible thanks to a rich documentation
+- documentation, like docstrings and typing to make code more understandable and accessible
 
 ## Acknowledgements
 This work is largely inspired by CodeRefinery: https://github.com/coderefinery/modular-type-along
