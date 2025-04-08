@@ -1,20 +1,20 @@
 # Documenting software
 
-## Introduction
+## Motivation and objectives
 
 Although it is difficult to pin down who first said _"code is read more often than it is written"_, they were probably right.
 
 Writing adequate documentation for your software will help yourself, other contributors, and users of your code. Some documentation tools (such as parameter annotation) can even help you prevent bugs.
 
-Below is one attempt at identifying different levels of achievement in documenting code:
+Below is one attempt at identifying different levels of achievement in documenting your Python code:
 
  1. Self-documenting code (good names for variables, functions, etc.)
 
  2. Comments and docstrings.
 
- 3. Python annotations.
+ 3. Type hints.
 
- 4. Well-formatted documentation, using tools such as:
+ 4. Well-formatted and automatic documentation, using tools such as:
 
     - [Sphynx](https://www.sphinx-doc.org/en/master/)
 
@@ -22,11 +22,9 @@ Below is one attempt at identifying different levels of achievement in documenti
 
     - [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
 
- 5. Standardized docstrings and automatic documentation (with the tools listed above)
+ 5. Automatic deployment with tools such as [Read the Docs](https://about.readthedocs.com/)
 
- 6. Automatic deployment with tools such as [Read the Docs](https://about.readthedocs.com/)
-
-For M2 internships, levels 1 and 2 are expected of all. Levels 3 through 5 are mostly relevant if you develop an external library containing more than a few functions. Level 6 is for wide-scale deployment.
+For M2 internships, levels 1 and 2 are expected of all. Levels 3 and 4 are mostly relevant if you develop an external library containing more than a few functions. Level 5 is for wide-scale deployment.
 
 ## Self documenting-code
 
@@ -60,7 +58,13 @@ There is no golden or unique rule for chosing good names in your code, but here 
 
 > "spline interpolation" can be shortened to `spline_interpolation`, `spline_interpolate`, `spline_interp`, `spline`, but not to `splineint` ("int" could mean integration, integer, etc. - too much ambiguity, even in the clear context of a computational code). This is in contrast to `get_argument()` where `getarg()` is perfectly clean and clear.
 
+ - On the other hand, the [Google's Python style guide](https://github.com/google/styleguide/blob/gh-pages/pyguide.md) recommands avoiding abbreviations. A perfect coding style probably does not exist. Rather, it is a matter of making sensible choices and using these choices consistently throughout your code.
+
  - Follow the conventions used by the community. For example, in Python, CamelCase is used for names of classes while functions, variables, and class instances use lower-case names, with underscores when necessary.
+
+ - If you contribute code to a project, follow the project's own coding guidelines, not your own!
+
+:brain: :pencil: Practice exercice: :pencil: :brain: Look at the code you have written so far for you internship. Are there any poorly named variables or functions? If yes, fix it now!
 
 ## Comments and docstrings
 
@@ -115,7 +119,7 @@ while True:
 
 Also, avoid comments that state things that are already made obvious by the code, such as:
 
-```
+```Python
 # Assign values to a and b
 a = 3
 b = 4
@@ -130,6 +134,10 @@ if nan_policy == 'omit' and contains_nan:
 else:
     percentile_func = np.percentile
 ```
+
+Note how the well-chosen names of the objects are entirely sufficient to understand this piece of code!
+
+:brain: :pencil: Practice exercice: :pencil: :brain: Look at the code you have written so far for you internship. Are there large sections that are lacking comments and that are difficult to undestand? If yes, use comments to make your code more readable. Are there any stating-the-obvious comments? If yes, take the time to clean out your code now!
 
 ### Docstrings
 
@@ -152,12 +160,57 @@ def linear_regression(x, y):
     return slope, intercept
 ```
 
-Docstrings usually contain a self-sufficient one-liner description of the function (or class, or script), followed, if necessary, by more detail. Function docstrings should describe at the very least the input arguments and the return value of the function.
+Docstrings usually contain a self-sufficient one-liner description of the function (or class, or script), followed, if necessary, by more detail. Function docstrings should describe at the very least:
 
-The Python function `help` shows docstrings, so you can access documentation directly from Python, without having to look at the source code. For example:
+ - The input arguments.
+ - The return value.
+
+It is probably acceptable to omit docstrings for functions whose signature is entirely self-explanatory.
+
+The Python function `help` shows docstrings, so you can access documentation directly from Python, without having to look at the source code. For example, we can show the documentation we just wrote for our function:
 
 ![image showing an example of the use of the help function called from a Jupyter notebook](./pics/documenting-software_docstring-and-help.png)
 
+> [!TIP]
+> In Jupyter notebooks, you can also press `SHIFT+TAB` to show the docstring of a function while you are writing the function's input arguments (ie. when the cursor is somewhere after the opening parenthesis following the function's name).
+
+For example:
+
+![image showing an example of the use of SHIFT+TAB from a Jupyter notebook](./pics/documenting-software_docstring-shift-tab.png)
+
 If they are formatted in a very specific way, docstrings can even be used to automatically generate user-friendly documentation in the form of a website. This topic is covered further below.
 
-## Annotations
+:brain: :pencil: Practice exercice: :pencil: :brain: Did you write any function for your internship so far? If yes, take the time to write the docstring for one of these functions. Make sure that you can access the docstring from your Jupyter notebook. Write the docstring for your other functions as soon as reasonable.
+
+## Type hints
+
+Python is a dynamically-type language, meaning that a programmer does not have to specify explicitly the type of the variable (this is unlike other languages such as C or FORTRAN).
+
+This approach has benefits such as flexibility and conciseness, but one downside is that it is difficult to know what type of data a function expects as input. For example, in our `linear_regression` example, it is difficult to know whether `x` and `y` can be lists of numbers or whether they must be Numpy arrays.
+
+Python type hints allow to explicitly indicate the types of a function's arguments (with a colon `:`), and the type of its returned value (with the symbol `->`), for example:
+
+```Python
+from typing import Tuple
+import numpy as np
+
+def linear_regression(x: np.ndarray, y: np.ndarray) -> Tuple[float, float]:
+    """Return the slope and intercept of the linear regresion y=ax+b.
+
+    Arrays x and y must have the same shape and must contain at least
+    two elements each.
+
+    """
+    if x.shape != y.shape or x.size < 2:
+        raise ValueError("Bad input arrays.")
+    xmean = x.mean()
+    ymean = y.mean()
+    slope = ((x - xmean) * (y - ymean)).sum() / ((x - xmean)**2).sum()
+    intercept = ymean - slope * xmean
+    return slope, intercept
+```
+
+Even without mastering the syntax of type hints, it should now be quite clear that our linear regression function expects Numpy arrays as input arguments, and that it returns two numbers (which are the slope and the intercept).
+
+> [!IMPORTANT]
+> Python will mostly ignore type hints and will not stop you from calling functions with arguments that do not match its type hints. Python remains a dynamically-type language even with type hints. There exist however third-party tools, such as `mypy`, that tell you when your code does not respect type hints. These type-checking tools can help you reduce the probably of bugs in your code, by detecting unintended use of functions.
