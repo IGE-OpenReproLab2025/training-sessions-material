@@ -20,8 +20,6 @@ Below is one attempt at identifying different levels of achievement in documenti
 
     - [MkDocs](https://www.mkdocs.org/)
 
-    - [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)
-
  5. Automatic deployment with tools such as [Read the Docs](https://about.readthedocs.com/)
 
 For M2 internships, levels 1 and 2 are expected of all. Levels 3 and 4 are mostly relevant if you develop a module or package containing more than a few functions. Level 5 is for wide-scale deployment.
@@ -186,6 +184,9 @@ If they are formatted in a very specific way, docstrings can even be used to aut
 
 Python is a dynamically-typed language, meaning that a programmer does not have to specify explicitly the types of variables (this is unlike other languages such as C or FORTRAN).
 
+> [!NOTE]
+> Here, the type of a variable refers to the type of data that the variable can "hold". Examples of types are integers (`int`), character strings (`str`), floating-point numbers (`float`), numpy arrays (`np.array`), etc.
+
 This approach has benefits such as flexibility and conciseness. One downside is that it is difficult to know what type of data a function expects as input. For example, in our `linear_regression` example, it is difficult to know whether `x` and `y` can be lists of numbers or whether they must be Numpy arrays.
 
 In Python, type hints explicitly indicate the types of a function's arguments (with a colon `:`), and the type of its returned value (with the symbol `->`), for example:
@@ -213,4 +214,81 @@ def linear_regression(x: np.ndarray, y: np.ndarray) -> Tuple[float, float]:
 Even without mastering the syntax of type hints, it should now be quite clear that our linear regression function expects Numpy arrays as input arguments, and that it returns two numbers (which are the slope and the intercept).
 
 > [!IMPORTANT]
-> Type hints are entirely optional. In fact, Python will mostly ignore them and will not stop you from calling functions with arguments that do not match its type hints. Python remains a dynamically-typed language even with type hints. There exist however third-party tools, such as `mypy`, that tell you when your code does not respect type hints. These type-checking tools can help you reduce the probably of bugs in your code, by detecting unintended use of functions.
+> Type hints are entirely optional. In fact, Python will mostly ignore them and will not stop you from calling functions with arguments that do not match its type hints. Python remains a dynamically-typed language even with type hints. There exist however third-party tools, such as [mypy](https://mypy.readthedocs.io/en/stable/getting_started.html), that analyze your code and tell you when your code does not respect type hints. These type-checking tools can help you reduce the probably of bugs in your code, by detecting unintended use of functions. There are also third-party tools that enforce type-checking at run time.
+
+As you can see in the example above, while the general idea of type hints is quite intuitive, the exact syntax is not, especially when working with complex data types. This section is meant to give you a taste of type hints, not a complete overview. You can find more exhaustive information at:
+
+ - [This realpython.com guide](https://realpython.com/python-type-checking/), which is a good introduction to typing in Python
+
+ - Python's [PEP 3107 on function annotations](https://peps.python.org/pep-3107/) and [PEP 484 on type hints](https://peps.python.org/pep-0484/), which describe typing in a technical manner
+
+# Well-formatted and automatic documentation
+
+If you use third-party packages such as Numpy or Scipy, you most likely have come across their documentations on the web, which are often build using tools such as:
+
+ - [Sphynx](https://www.sphinx-doc.org/en/master/)
+
+ - [MkDocs](https://www.mkdocs.org/)
+
+These tools create webpages (HTML + JavaScript) from text files written in markdown or other simplified markup languages. One of their most interesting features (available natively or via plugins) is their capacity to automatically generate documentation directly from docstrings (and optionally type hints) found in Python code.
+
+For example, look below at the docstring of Scipy's linear regression's function (`linregress`), and then at the corresponding online Scipy documentation, which was generated with Sphinx. Do you notice any resemblance?
+
+![image showing the docstring of Scipy's linear regression function linregress](./pics/documenting-software_scipy-docstring.png)
+
+![image showing the online documentation of Scipy's linear regression function linregress](./pics/documenting-software_scipy-online-doc.png)
+
+These tools expect docstrings to be written in a predictable format. There exist several widely-adopted conventions for such docstrings, two of which are:
+
+1. The [numpy/scipy style](https://numpydoc.readthedocs.io/en/latest/format.html#) is very human-readable but not very compact. It uses lines of dashes to separate sections:
+
+```Python
+def linear_regression(x, y):
+    """Calculate the linear regresion y = a * x + b.
+
+    Parameters
+    ----------
+    x : np.array
+        The x values (ie. the independent variable).
+    y : np.array
+        The y values (ie. the dependent variable).
+
+    Returns
+    -------
+    (float, float)
+        The slope and intercept.
+
+    Raises
+    ------
+    ValueError
+        If the shapes of x and y mismatch.
+
+    """
+```
+
+2. The [Google style](https://github.com/google/styleguide/blob/gh-pages/pyguide.md) is more compact but harder to read for long docstrings. It uses indentation to separate sections:
+
+```Python
+def linear_regression(x, y):
+    """Calculate the linear regresion y = a * x + b.
+
+    Args:
+        x (np.array): The x values (ie. the independent variable).
+        y (np.array): The y values (ie. the dependent variable).
+
+    Returns:
+        (float, float): The slope and intercept.
+
+    Raises:
+        ValueError: the shapes of x and y mismatch.
+
+    """
+```
+
+Even if you do not plan to use automatic documentation tools just yet, it might be a good idea to choose one of these styles for your docstrings and stick to it. This way, other people reading your code will navigate and understand your docstrings easily. Besides, should you ever decide to use automatic documentation tools, most of the work will already be done.
+
+How to install, configure, and use these tools to produce automatic documentation is beyond the scope of this lecture, but their respective websites contain the relevant information. Which one should you choose though? Ultimately the choice is yours, but these considerations might help you decide:
+
+ - [Sphynx](https://www.sphinx-doc.org/en/master/) has a large community of users and is used by many well-known projects (Python official documentation, Numpy, Scipy, Pandas, etc.). It uses the quite cumbersome but feature-rich [reStructured text](https://en.wikipedia.org/wiki/ReStructuredText) format.
+
+ - [MkDocs](https://www.mkdocs.org/) is probably less widely-used but more user-friendly because it uses the simple [Markdown](https://en.wikipedia.org/wiki/Markdown) format.
