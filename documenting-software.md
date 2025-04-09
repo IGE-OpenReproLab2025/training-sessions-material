@@ -276,11 +276,11 @@ Even if you do not plan to use automatic documentation tools just yet, it might 
 
 How to install, configure, and use these tools to create documentation is beyond the scope of this tutorial, but their respective websites contain the relevant information. Which one should you choose though? Ultimately the choice is yours, but these considerations might help you decide:
 
- - [Sphynx](https://www.sphinx-doc.org/en/master/) is used by many well-known projects ([Python official documentation](https://docs.python.org/3/), [Numpy](https://numpy.org/), [Scipy](https://scipy.org/), [Pandas](https://pandas.pydata.org/), etc.). It uses the quite cumbersome but feature-rich [reStructured text](https://en.wikipedia.org/wiki/ReStructuredText) format.
+ - [Sphynx](https://www.sphinx-doc.org/en/master/) has a wide user-community and has been adopted by many well-known projects ([Python official documentation](https://docs.python.org/3/), [Numpy](https://numpy.org/), [Scipy](https://scipy.org/), [Pandas](https://pandas.pydata.org/), etc.). It relies on the quite cumbersome but feature-rich [reStructured text](https://en.wikipedia.org/wiki/ReStructuredText) format.
 
- - [MkDocs](https://www.mkdocs.org/) is probably less widely-used but more user-friendly because it uses the simple [Markdown](https://en.wikipedia.org/wiki/Markdown) format.
+ - [MkDocs](https://www.mkdocs.org/) is probably less widely-adopted as of now but more user-friendly because it relies on the simple [Markdown](https://en.wikipedia.org/wiki/Markdown) format.
 
- - [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is well suited for content that contains executable code such as Jupyter notebooks. It uses the [MyST Markdown](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-core) format.
+ - [Jupyter Book](https://jupyterbook.org/en/stable/intro.html) is well suited for content that contains executable code such as Jupyter notebooks. It relies on the [MyST Markdown](https://myst-parser.readthedocs.io/en/latest/syntax/typography.html#syntax-core) format.
 
 # Read the Docs
 
