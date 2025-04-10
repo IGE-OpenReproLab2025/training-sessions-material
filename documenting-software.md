@@ -18,7 +18,7 @@ Below is one attempt at identifying different levels of achievement in documenti
 
  4. Well-formatted and automatic documentation, using tools such as:
 
-    - [Sphynx](https://www.sphinx-doc.org/en/master/)
+    - [Sphinx](https://www.sphinx-doc.org/en/master/)
 
     - [MkDocs](https://www.mkdocs.org/)
 
@@ -233,7 +233,7 @@ While the general idea of type hints is quite intuitive, the exact syntax is not
 
 If you use third-party packages ([Numpy](https://numpy.org/), [Scipy](https://scipy.org/), etc.), you most likely have come across their documentations on the web, which are often build with tools such as:
 
- - [Sphynx](https://www.sphinx-doc.org/en/master/)
+ - [Sphinx](https://www.sphinx-doc.org/en/master/)
 
  - [MkDocs](https://www.mkdocs.org/)
 
@@ -298,7 +298,7 @@ Even if you do not plan to use automatic documentation tools just yet, it might 
 
 How to install, configure, and use these tools to create documentation is beyond the scope of this tutorial, but their respective websites contain the relevant information. Which one should you choose though? Ultimately the choice is yours, but these considerations might help you decide:
 
- - [Sphynx](https://www.sphinx-doc.org/en/master/) has a wide community of users and has been adopted by many well-known projects ([Python official documentation](https://docs.python.org/3/), [Numpy](https://numpy.org/), [Scipy](https://scipy.org/), [Pandas](https://pandas.pydata.org/), etc.). It relies on the quite cumbersome but feature-rich [reStructured text](https://en.wikipedia.org/wiki/ReStructuredText) format.
+ - [Sphinx](https://www.sphinx-doc.org/en/master/) has a wide community of users and has been adopted by many well-known projects ([Python official documentation](https://docs.python.org/3/), [Numpy](https://numpy.org/), [Scipy](https://scipy.org/), [Pandas](https://pandas.pydata.org/), etc.). It relies on the quite cumbersome but feature-rich [reStructured text](https://en.wikipedia.org/wiki/ReStructuredText) format.
 
  - [MkDocs](https://www.mkdocs.org/) is probably less widely-adopted as of now but more user-friendly because it relies on the simple [Markdown](https://en.wikipedia.org/wiki/Markdown) format.
 
@@ -306,7 +306,7 @@ How to install, configure, and use these tools to create documentation is beyond
 
 # Read the Docs
 
-[Read the Docs](https://about.readthedocs.com/) is a web platform for wide-scale deployment of software documentation. It can monitor an online repository hosted on [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) and rebuild documentation (using [Sphynx](https://www.sphinx-doc.org/en/master/), [MkDocs](https://www.mkdocs.org/), or [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)) automatically when changes are pushed to the repository. It offers features, sometimes for a cost, that are mostly relevant to content that reaches many people, such as analytics and automatic configurations of CDNs, or that are necessary only in specific use cases, such as access control via authentication.
+[Read the Docs](https://about.readthedocs.com/) is a web platform for wide-scale deployment of software documentation. It can monitor an online repository hosted on [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) and rebuild documentation (using [Sphinx](https://www.sphinx-doc.org/en/master/), [MkDocs](https://www.mkdocs.org/), or [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)) automatically when changes are pushed to the repository. It offers features, sometimes for a cost, that are mostly relevant to content that reaches many people, such as analytics and automatic configurations of CDNs, or that are necessary only in specific use cases, such as access control via authentication.
 
 # Software conservation and persistent citation via Software Heritage
 
