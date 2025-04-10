@@ -2,7 +2,9 @@
 
 ## Motivation and objectives
 
-Although it is difficult to pin down who first said _"code is read more often than it is written"_, they were probably right.
+> Code is read more often than it is written
+>
+> _- Unknown_
 
 Writing adequate documentation for your software will help yourself, other contributors, and users of your code. Some documentation tools (such as type hinting) can even help you prevent bugs.
 
@@ -64,13 +66,15 @@ There is no golden or unique rule for chosing good names in your code, but here 
 
  - If you contribute code to a project, follow the project's own coding style, not your own!
 
-:brain: :pencil: Practice exercise :pencil: :brain: Look at the code you have written so far for your internship. Are there any poorly-named variables or functions? If yes, fix it now.
+#### :brain: :pencil: Practice exercise :pencil: :brain:
+
+Look at the code you have written so far for your internship. Are there any poorly-named variables or functions? If yes, fix it now.
 
 ## Comments and docstrings
 
 There are two target audiences for software documention: developers and users.
 
-We usually rely on comments to document code for oneself and other developers, whereas we rely on dosctrings to document code for users.
+We usually rely on comments to document code for oneself and other developers, whereas in Python we rely on dosctrings to document code for users.
 
 ### Comments
 
@@ -89,7 +93,7 @@ Consider this example:
 ```Python
 vector = [45, 12, -4, 31, -57, -100, 10, 0]
 
-# Sort the vector by swithing values two-by-two if they are in the wrong order,
+# Sort the vector by switching values two-by-two if they are in the wrong order,
 # and repeating this process until there is nothing left to switch
 while True:
     untouched = True
@@ -117,7 +121,10 @@ while True:
         break
 ```
 
-Also, avoid comments that state things that are already made obvious by the code, such as:
+> [!TIP]
+> If the algorithm is not widely known, it's a good idea to include a link or reference in the comment.
+
+Also avoid comments that state things that are already made obvious by the code, such as:
 
 ```Python
 # Assign values to a and b
@@ -125,11 +132,13 @@ a = 3
 b = 4
 ```
 
-:brain: :pencil: Practice exercise :pencil: :brain: Look at the code you have written so far for your internship. Are there large sections that are lacking comments and that are difficult to understand? If yes, use comments to make your code more readable. Are there any stating-the-obvious comments? If yes, take the time to clean out your code now.
+#### :brain: :pencil: Practice exercise :pencil: :brain:
+
+Look at the code you have written so far for your internship. Are there large sections that are lacking comments and that are difficult to understand? If yes, use comments to make your code more readable. Are there any stating-the-obvious comments? If yes, take the time to clean out your code now.
 
 ### Docstrings
 
-A docstring is a piece of text that documents a function, a class, or a script. It is delimited by triple quotes. In a function, it immediately follows the header of the function, while in a script it is located at the top of the file. For example, adapting the linear regression function from above:
+A docstring is a piece of text that documents a Python function, class, or script. It is delimited by triple quotes. In a function, it immediately follows the header of the function, while in a script it is located at the top of the file. For example, adapting the linear regression function from above:
 
 ```Python
 def linear_regression(x, y):
@@ -149,7 +158,7 @@ def linear_regression(x, y):
 ```
 
 > [!TIP]
-> Docstrings usually contain a self-sufficient one-liner description of the function (or class, or script), followed, if necessary, by more detail.
+> Docstrings usually contain a self-sufficient "one-liner" description of the function (or class, or script), followed, if necessary, by more detail.
 
 Function docstrings should describe at the very least:
 
@@ -161,15 +170,24 @@ The Python function `help` shows docstrings, so you can access documentation dir
 ![image showing an example of the use of the help function called from a Jupyter notebook](./pics/documenting-software_docstring-and-help.png)
 
 > [!TIP]
-> In Jupyter notebooks, you can also press `SHIFT+TAB` to show the docstring of a function while you are writing the function's input arguments (ie. when the cursor is somewhere after the opening parenthesis following the function's name).
+> In Jupyter notebooks, you can press `SHIFT+TAB` to show the docstring of a function while you are writing the function's input arguments (ie. when the cursor is somewhere after the opening parenthesis following the function's name).
 
 For example:
 
 ![image showing an example of the use of SHIFT+TAB from a Jupyter notebook](./pics/documenting-software_docstring-shift-tab.png)
 
+> [!TIP]
+> In JupyterLab, you can also press `CTRL+I` (`CMD+I` on macOS) or right-click > 'Show Contextual Help'  to show/hide the contextual help pane (inspector). This pane displays the docstring of the function the cursor is located in and updates as you type or move the cursor.
+
+For example:
+
+![image showing the JupyterLab contextual help pane](./pics/documenting-software_contextual-help.png)
+
 If they are formatted in a very specific way, docstrings can even be used to automatically generate user-friendly documentation in the form of a website. This topic is covered further below.
 
-:brain: :pencil: Practice exercise :pencil: :brain: Did you write any function for your internship so far? If yes, take the time to write the docstring for one of these functions. Make sure that you can access the docstring from your Jupyter notebook. Write the docstring for your other functions as soon as reasonable.
+#### :brain: :pencil: Practice exercise :pencil: :brain:
+
+Did you write any function for your internship so far? If yes, take the time to write the docstring for one of these functions. Make sure that you can access the docstring from your Jupyter notebook. Write the docstring for your other functions as soon as reasonable.
 
 ## Type hints
 
@@ -183,10 +201,9 @@ Dynamically-typed languages have benefits such as flexibility and conciseness. O
 In Python, type hints explicitly indicate the types of a function's arguments (with a colon `:`), and the type of its returned value (with the symbol `->`), for example:
 
 ```Python
-from typing import Tuple
 import numpy as np
 
-def linear_regression(x: np.ndarray, y: np.ndarray) -> Tuple[float, float]:
+def linear_regression(x: np.ndarray, y: np.ndarray) -> tuple[float, float]:
     """Return the slope and intercept of the linear regresion y=ax+b.
 
     Arrays x and y must have the same shape and must contain at least
@@ -195,6 +212,9 @@ def linear_regression(x: np.ndarray, y: np.ndarray) -> Tuple[float, float]:
     """
     ...
 ```
+
+> [!CAUTION]
+> Old versions of Python (< 3.9) do not have the built-in type hint syntax `tuple[float, float]`. Instead, you must do `from typing import Tuple` and use the syntax `Tuple[float, float]`. 
 
 Even without mastering the syntax of type hints, it should now be quite obvious that our linear regression function expects Numpy arrays as input arguments, and that it returns two numbers (which are the slope and the intercept).
 
