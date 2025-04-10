@@ -205,9 +205,9 @@ for num_measurements in [25, 100, 500]:
         column="Air temperature (degC)",
         num_rows=num_measurements
     )
-    
+
     temperature_mean = compute_mean(temperatures)
-    
+
     plot_data(
         data=temperatures,
         mean=temperature_mean,
@@ -257,9 +257,9 @@ for num_measurements in [25, 100, 500]:
         column="Air temperature (degC)",
         num_rows=num_measurements
     )
-    
+
     temperature_mean = dapro.compute_mean(temperatures)
-    
+
     dapro.plot_data(
         data=temperatures,
         mean=temperature_mean,
@@ -267,6 +267,14 @@ for num_measurements in [25, 100, 500]:
         ylabel="Air temperature (deg C)",
         output_plot_file=f"{num_measurements}.png"
     )
+```
+
+Your project directory should now look like this:
+
+```
+.
+├── data_processing.py
+└── notebook.ipynb
 ```
 
 The notebook now contains only the very high-level instructions that are sufficient to understand the general idea of the treatment applied to them. Separated in this way, both your functions and your notebook are much clearer, and reuse is greatly simplified.
@@ -284,9 +292,9 @@ for num_measurements in [25, 100, 500]:
         column="Air temperature (degC)",
         num_rows=num_measurements
     )
-    
+
     temperature_mean = dapro.compute_mean(temperatures)
-    
+
     dapro.plot_data(
         data=temperatures,
         mean=temperature_mean,
@@ -295,6 +303,17 @@ for num_measurements in [25, 100, 500]:
         output_plot_file=f"{num_measurements}.png"
     )
 ```
+
+Your project directory should now look like this:
+
+```
+.
+├── modules
+│   ├── __init__.py
+│   └── data_processing.py
+└── notebook.ipynb
+```
+
 
 From now on, if several of our notebooks need these functions, they are all defined here.
 - We can add parameters to make them more generic (i.e. able to handle more situations).
