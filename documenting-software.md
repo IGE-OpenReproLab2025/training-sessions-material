@@ -1,4 +1,4 @@
-# Documenting software
+# Software documentation and conservation
 
 ## Motivation and objectives
 
@@ -27,6 +27,8 @@ Below is one attempt at identifying different levels of achievement in documenti
  5. Automatic deployment with tools such as [Read the Docs](https://about.readthedocs.com/)
 
 For M2 internships, levels 1 and 2 are expected of all. Levels 3 and 4 are mostly relevant if you develop a module or package containing more than a few functions. Level 5 is for wide-scale deployment.
+
+A section on long-term conservation and persistent citation of software via [Software Heritage](https://www.softwareheritage.org/), which will be useful when you write scientific papers, concludes this tutorial.
 
 ## Self documenting-code
 
@@ -214,7 +216,7 @@ def linear_regression(x: np.ndarray, y: np.ndarray) -> tuple[float, float]:
 ```
 
 > [!CAUTION]
-> Old versions of Python (< 3.9) do not have the built-in type hint syntax `tuple[float, float]`. Instead, you must do `from typing import Tuple` and use the syntax `Tuple[float, float]`. 
+> Old versions of Python (< 3.9) do not have the built-in type hint syntax `tuple[float, float]`. Instead, you must do `from typing import Tuple` and use the syntax `Tuple[float, float]`.
 
 Even without mastering the syntax of type hints, it should now be quite obvious that our linear regression function expects Numpy arrays as input arguments, and that it returns two numbers (which are the slope and the intercept).
 
@@ -305,3 +307,19 @@ How to install, configure, and use these tools to create documentation is beyond
 # Read the Docs
 
 [Read the Docs](https://about.readthedocs.com/) is a web platform for wide-scale deployment of software documentation. It can monitor an online repository hosted on [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) and rebuild documentation (using [Sphynx](https://www.sphinx-doc.org/en/master/), [MkDocs](https://www.mkdocs.org/), or [Jupyter Book](https://jupyterbook.org/en/stable/intro.html)) automatically when changes are pushed to the repository. It offers features, sometimes for a cost, that are mostly relevant to content that reaches many people, such as analytics and automatic configurations of CDNs, or that are necessary only in specific use cases, such as access control via authentication.
+
+# Software conservation and persistent citation via Software Heritage
+
+Online software-hosting platforms such as [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) seem currently reliable, but there is no guarantee that they will exist in the future. They are therefore not a good solution for long-term software conservation, nor they are a good solution for citing software reliably in scientific publications.
+
+In contrast, [Software Heritage](https://www.softwareheritage.org/)'s core mission is to archive and preserve software on the long-term. It is, using their own words, _"an open, non-profit infrastructure [...] supported by a broad panel of institutional and industry partners, in collaboration with UNESCO."_
+
+Software Heritage automatically adds repositories to its archive from various sources, including [GitHub](https://github.com/). If a repository has not yet been automatically added to Software Heritage, you can add it by just by copy-pasting its URL on [this webpage](https://save.softwareheritage.org/), for example:
+
+![image showing Software Heritage's interface to archive a git repository that is not archived yet](./pics/documenting-software_archive-repo-to-softwareheritage.png)
+
+Once a repository is archived on [Software Heritage](https://www.softwareheritage.org/), you can obtain unique and permanent identifiers and URLs to cite a specific snapshot of this repository, a specific commit, a specific directory of a specific commit, a specific file of a specific commit, and even specific lines within this file! For example, this [unique and permanent URL](https://archive.softwareheritage.org/swh:1:cnt:4b8c1850cd0dad3d654216ae45dad04dafaa983b;origin=https://github.com/scipy/scipy;visit=swh:1:snp:314f48d1596d7765f9028eadcbfb11dce457cfc6;anchor=swh:1:rev:0f1fd4a7268b813fa2b844ca6038e4dfdf90084a;path=/scipy/stats/_stats_py.py;lines=10563-10761) points to the `linregress` function of [Scipy](https://scipy.org/) version 1.15.2. These identifiers can be used to cite code in scientific publications. Software Heritage can even produce code citations in the Bibtex format!
+
+To obtain a unique and permanent identifier to a piece of software, search the Software Heritage archive for the resource you want to cite, click on the "Permalinks" button at the right edge of the window, select the exact resource you want to cite, and get the unique identifier or the corresponding URL by clicking on "Copy identifier" or "Copy permalink", respectively. For example, to get the identifier corresponding to [Scipy](https://scipy.org/) version 1.15.2:
+
+![image showing Software Heritage's interface to get an identifier for a resource](./pics/documenting-software_get-identifier-from-softwareheritage.png)
