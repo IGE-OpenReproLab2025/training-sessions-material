@@ -310,7 +310,7 @@ How to install, configure, and use these tools to create documentation is beyond
 
 # Software conservation and persistent citation via Software Heritage
 
-Online software-hosting platforms such as [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) may seem currently reliable, but there is no guarantee that they will exist in the future. They are therefore not a good solution for long-term software conservation, nor they are a good solution for citing software reliably in scientific publications.
+Online software-hosting platforms such as [GitHub](https://github.com/) or [GitLab](https://about.gitlab.com/) may seem currently reliable, but there is no guarantee that they will exist in the future. They are therefore not a good solution for long-term software conservation, nor are they a good solution for citing software reliably in scientific publications.
 
 In contrast, [Software Heritage](https://www.softwareheritage.org/)'s core mission is to archive and preserve software on the long-term. Software Heritage is, using their own words, _"an open, non-profit infrastructure [...] supported by a broad panel of institutional and industry partners, in collaboration with UNESCO."_
 
@@ -318,10 +318,14 @@ Software Heritage automatically adds repositories to its archive from various so
 
 ![image showing Software Heritage's interface to archive a git repository that is not archived yet](./pics/documenting-software_archive-repo-to-softwareheritage.png)
 
-Once a repository is archived on [Software Heritage](https://www.softwareheritage.org/), you can obtain a unique and permanent identifier or URL to cite a specific snapshot of this repository, a specific commit, a specific directory, a specific file, or even specific lines within this file! For example, this [unique and permanent URL](https://archive.softwareheritage.org/swh:1:cnt:4b8c1850cd0dad3d654216ae45dad04dafaa983b;origin=https://github.com/scipy/scipy;visit=swh:1:snp:314f48d1596d7765f9028eadcbfb11dce457cfc6;anchor=swh:1:rev:0f1fd4a7268b813fa2b844ca6038e4dfdf90084a;path=/scipy/stats/_stats_py.py;lines=10563-10761) points to the `linregress` function of [Scipy](https://scipy.org/) version 1.15.2.
+Once a repository is archived on [Software Heritage](https://www.softwareheritage.org/), you can obtain a unique and permanent identifier or URL to cite a specific snapshot of this repository, a specific commit, a specific directory, a specific file, or even specific lines within this file!
+
+For example, this [unique and permanent URL](https://archive.softwareheritage.org/swh:1:cnt:4b8c1850cd0dad3d654216ae45dad04dafaa983b;origin=https://github.com/scipy/scipy;visit=swh:1:snp:314f48d1596d7765f9028eadcbfb11dce457cfc6;anchor=swh:1:rev:0f1fd4a7268b813fa2b844ca6038e4dfdf90084a;path=/scipy/stats/_stats_py.py;lines=10563-10761) points to the `linregress` function of [Scipy](https://scipy.org/) version 1.15.2.
 
 Such identifiers can be used to cite code in scientific publications. Software Heritage can even produce code citations in the Bibtex format!
 
-To obtain a unique and permanent identifier or URL to a piece of software, search the [Software Heritage archive](https://archive.softwareheritage.org/) for the resource you want to cite, click on the "Permalinks" button at the right edge of the window, and click on "Copy identifier" or "Copy permalink". For example, to get the identifier corresponding to [Scipy](https://scipy.org/) version 1.15.2:
+To obtain a unique and permanent identifier or URL for a piece of software, search the [Software Heritage archive](https://archive.softwareheritage.org/) for the resource you want to cite, click on the "Permalinks" button at the right edge of the window, and click on "Copy identifier" or "Copy permalink".
+
+For example, to get the identifier corresponding to [Scipy](https://scipy.org/) version 1.15.2:
 
 ![image showing Software Heritage's interface to get an identifier for a resource](./pics/documenting-software_get-identifier-from-softwareheritage.png)
