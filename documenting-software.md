@@ -329,3 +329,7 @@ To obtain a unique and permanent identifier or URL for a piece of software, sear
 For example, to get the identifier corresponding to [Scipy](https://scipy.org/) version 1.15.2:
 
 ![image showing Software Heritage's interface to get an identifier for a resource](./pics/documenting-software_get-identifier-from-softwareheritage.png)
+
+Identifiers provided by Software Heritage are called SWHIDs (software hash identifiers).
+
+Although the SWHID can be used to uniquely identify a piece of software, peer-reviewed journals may prefer to DOIs instead. Once a piece of software is in the Software Heritage archive, you can create a DOI entry for it in a few clicks using [HAL](https://hal.science/?lang=en) or [Zenodo](https://zenodo.org/).
