@@ -88,6 +88,8 @@ Comments are arbitrary pieces of text that are ignored by the Python interpreter
 
  - Cite a reference for a method
 
+ - Indicate the units of numerical constants (for example: `g = 9.81  # m s-2`)
+
 Good comments tell **what** a piece of code does, but not **how** it does it. There is no need to explain how code works if the code is clean and well-written.
 
 Consider this example:
