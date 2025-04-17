@@ -34,7 +34,7 @@ The expected program is :
 
 - **Session 7 - Documentation and conservation** (April 17th)
   - [for data : meta data, readme, conventions, markdown, zenodo](documentation_and_conservation_data.ipynb) [Laurane]
-  - for software : docstring, reathedoc, software heritage [Lucas B ?]
+  - [for software : comments, docstrings, web-based documentation, software heritage](documentation-and-conservation_software.md) [Lucas B]
 
 ## Useful links
 - https://openreprolab-ige.osug.fr
