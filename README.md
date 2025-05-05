@@ -36,6 +36,12 @@ The expected program is :
   - [for data : meta data, readme, conventions, markdown, zenodo](documentation_and_conservation_data.ipynb) [Laurane]
   - [for software : comments, docstrings, web-based documentation, software heritage](documentation-and-conservation_software.md) [Lucas B]
 
+- **session 8 - Check point #3** (April 24th)
+  - Q&A session with the participants
+ 
+- **session 9 - Improving your plots** (May 15th)
+  - ingredients and good practices for academic illustrations [tbd]  
+
 ## Useful links
 - https://openreprolab-ige.osug.fr
 - https://ige-calcul.github.io/public-docs/docs/index.html
