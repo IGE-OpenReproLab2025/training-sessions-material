@@ -42,6 +42,10 @@ The expected program is :
 - **session 9 - Improving your plots** (May 15th)
   - ingredients and good practices for academic illustrations [tbd]  
 
+- **session 10 - Check point #4** (May 22th)
+  - discussing plots from the participants.
+  - 
+
 ## Useful links
 - https://openreprolab-ige.osug.fr
 - https://ige-calcul.github.io/public-docs/docs/index.html
