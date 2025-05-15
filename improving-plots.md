@@ -1,6 +1,5 @@
 # Improving your plots
 
-
 [Do's and don't by Jennie](https://docs.google.com/presentation/d/1G0HcssmM5A5HbG-sKbXCXg07G4YdC7Pv2S2QyjlHT8c/edit?usp=sharing)
 
 ## Plotting with python
