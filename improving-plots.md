@@ -1,6 +1,8 @@
-Improving your plots
-====================
-
+---
+title: Improving your plots in Python
+author: Ian Hough, Jennie Thomas
+date: 2025-05-15
+---
 
 Why make a (good) plot?
 -----------------------
@@ -10,29 +12,33 @@ Why make a (good) plot?
 
 ### An example
 
-The 1986 Challenger Shuttle disaster - taken from Edward Tufte's book [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/book/visual-explanations-images-and-quantities-evidence-and-narrative/).
+This example is taken from Edward Tufte's book [Visual Explanations: Images and Quantities, Evidence and Narrative](https://www.edwardtufte.com/book/visual-explanations-images-and-quantities-evidence-and-narrative/).
 
-On January 28, 1986, the space shuttle Challenger exploded shortly after launch. Subsequent investigation blamed the explosion on a faulty O-ring seal caused by the cold weather.
+On January 28, 1986 the space shuttle Challenger, manned by seven astronauts including a civilian schoolteacher, exploded shortly after launch. Subsequent investigation blamed a faulty O-ring that stiffend in the below-freezing weather and failed to seal.
 
-![Challenger launch](./pics/plotting_challenger-launch.jpg) ![Challenger explosion](./pics/plotting_challenger-explosion.jpg)
+| | |
+|-|-|
+| ![](./pics/plotting_challenger-launch.jpg) | ![](./pics/plotting_challenger-explosion.jpg) |
 
-The previous day, the engineers that designed the rocket had given a presentation arguing to delay the launch in response to the low temperature forecast due to the risk of O-ring failure. NASA responded skeptically, arguing that the evidence the engineers presented did not conclusively link O-ring problems to low temperature. Ultimately, the decision to launch was maintained.
+The previous day, the contractor that built the rocket had requested a launch delay based on their engineers' concern that the forecast low temperatures could present a risk of O-ring failure. NASA responded that the evidence the engineers presented did not conclusively link O-ring problems to low temperature, and ultimately the contractor agreed that the launch should go ahead.
 
-Here are two of the slides from the presentation arguing for a launch delay (from Tufte's *Visual Explanations*):
+Here are two of the slides from the presentation arguing for a launch delay. These slides were shown separately, accompanied by an oral presentation. The first lists test launches that experienced O-ring damage and the second lists environmental conditions for some of the test launches. The row "SRM-25" shows the forecast temperatures for the actual launch (from Tufte's *Visual Explanations*):
 
-![Tufte slide 1](./pics/plotting_tufte-challenger-slide1.jpg) ![Tufte slide 2](./pics/plotting_tufte-challenger-slide2.jpg)
+![](./pics/plotting_tufte-challenger-slide1.jpg)
 
-Note that these slides were shown separately. How easy are they to understand without the accompanying oral presentation? Do you think a more visual presentation would be helpful?
+![](./pics/plotting_tufte-challenger-slide2.jpg)
 
-The presentation also included this plot showing temperature and O-ring damage in previous test launches (from Tufte's *Visual Explanations*):
+Do you see a link between ambient temperature and O-ring damage?
 
-![Tufte slide 3](./pics/plotting_tufte-challenger-slide3.jpg)
+The presentation also included a plot showing temperature and O-ring damage in all previous test launches. The legend for this slide was shown on a previous slide; vertical hash marks indicate different types of O-ring damage (from Tufte's *Visual Explanations*):
 
-Would you delay the launch based on this evidence?
+![](./pics/plotting_tufte-challenger-slide3.jpg)
 
-Tufte argued that the engineers might have been more convincing if they had used a plot like this instead (from Tufte's *Visual Explanations*):
+Would you delay the launch based on these slides?
 
-![Tufte plot](./pics/plotting_tufte-challenger-plot.png)
+Tufte argued that the engineers might have been more convincing if they had shown a plot like this (from Tufte's *Visual Explanations*):
+
+![](./pics/plotting_tufte-challenger-plot.png)
 
 What do you think?
 
@@ -40,24 +46,110 @@ What do you think?
 What makes a good plot?
 -----------------------
 
-[Presentation: plotting dos and don'ts](https://docs.google.com/presentation/d/1G0HcssmM5A5HbG-sKbXCXg07G4YdC7Pv2S2QyjlHT8c/edit?usp=sharing)
+### Dos and Don'ts
+
+**Do**:
+
+* Make the story clear
+  * Good plot type
+  * Good colors & map projections
+  * Good axis/colorbar ranges
+* Avoid distractions
+  * Avoid clutter
+  * Use appropriate fonts
+* Make it easy to understand
+  * Units, axis labels, key/legend
+  * Title (sometimes optional)
+  * Figure caption (write it!)
+
+**Don't**:
+
+* Confuse or mislead
+  * Inappropriate plot type
+  * Inappropriate colors/projections
+  * Poor axis/colorbar scale/range
+* Distract
+  * Show too much information
+  * Inappropriate fonts
+* Make it hard to understand
+  * Text/plot elements too small
+  * No units, axis labels, key/legend
+  * Confusing or ambiguous caption
+
+### Examples
+
+Here are some examples of plots from Jennie's papers. What do you think they do well? What could be improved?
+
+#### Example 1
+
+Source: https://doi.org/10.5194/acp-22-14467-2022
+
+![](pics/plotting_example1.jpg)
+
+**Figure 2.** Locations of MAX-DOAS BrO observations used in this work. Blue lines show the drift tracks of O-Buoys, with green showing the locations with valid BrO measurements in spring 2015. Location of Barrow Arctic Research Center (BARC) in Utqiaġvik indicated by green dots. True color MODIS imagery on 1 April 2015 shows typical sea ice coverage (NASA, 2015). The inset map shows the location of the map grid within the Northern Hemisphere.
+
+#### Example 2
+
+Source: https://doi.org/10.1186/s43591-022-00048-w
+
+![](pics/plotting_example2.jpg)
+
+**Fig. 3** Plastics dispersal through Earth surface reservoirs from 1950 to the year 3000, following a halt on production and discard in 2025. This unrealistic model scenario illustrates over what timescales discarded microplastic (P, > 5 mm), large microplastic (LMP) and small microplastic (SMP, < 0.3 mm) potentially disperse via rivers and air into oceans, remote terrestrial surfaces, beach and marine sediments. A P and LMP disappear in all transitory reservoirs within 100 and 200 years due to fragmentation at an annual rate of 3%. The prolonged dispersal of SMP in all reservoirs is driven by cyclical marine emissions to air, deposition to terrestrial surfaces, runoff to surface oceans, and re-emission to air. Only a small fraction of SMP sinks to shelf sediments and to the deep ocean, followed by slow sedimentation to deep ocean sediments. SMP mass, and concentrations, in the surface ocean and atmosphere, where human SMP exposure is relevant, only return to 2025 levels towards the year 5000 (Fig. 4)
+
+#### Example 3
+
+Source: https://doi.org/10.1029/2022JD038235
+
+![](pics/plotting_example3.jpg)
+
+**Figure 1.** Arctic and Antarctic measurement stations providing sea salt surface mass concentration data. Blue colormaps indicate areas with a sea ice concentration above 50%. The lighter blue is for February in the Arctic, and August in the Antarctic. The darker blue is the opposite. The sea ice data are from ERA5. The black dashed line shows the 60° limit considered for regional aggregated analyses. Abbreviations in the maps are the first two letters of the corresponding station name.
+
+#### Example 4
+
+Source: https://doi.org/10.1029/2022JD038235
+
+![](pics/plotting_example4.jpg)
+
+**Figure 8.** Annual cycle of sodium aerosol surface mass concentrations at nine stations in the Arctic (top and middle) and five stations in the Antarctic (bottom). Observations are in black (caps show one standard deviation of monthly means), individual CMIP6 models (1951–2014) are in light blue, CMIP6 ensemble mean (solid thick line) is in blue. CMIP6 values are bias corrected by applying a factor <OBS> / <MODEL>. Boxes indicate the Pearson correlation coefficient between the annual cycle in CMIP6 ensemble mean and observations, with the 95% confidence interval between brackets.
+
+#### Example 5
+
+Source: https://doi.org/10.1525/elementa.2022.00129
+
+![](pics/plotting_example5.jpg)
+
+#### Example 6
+
+Source: https://doi.org/10.1525/elementa.2022.00129
+
+![](pics/plotting_example6.jpg)
+
+**Simulated mean surface ozone concentration.** Surface ozone concentration is averaged for the full simulation period (March 14 to April 14, 2020). Observational averages for the same period are shown by markers with the same colour scale.
+
+#### Example 7
+
+Source: https://doi.org/10.1525/elementa.2022.00129
+
+![](pics/plotting_example7.jpg)
+
+**Model comparison of surface ozone concentrations with observations from Arctic stations.** Hourly average of surface O3 observations (black) and simulated O3 by WRF-Chem (red) at (a) Villum, Greenland; (b) Alert, Canada; (c) Zeppelin, Svalbard; (d) Utqia͘gvik, Alaska; (e) Summit, Greenland; and (f) Eureka, Canada. Grey dashed lines represent the value of O3 depletion events (<10 ppb). Red-shaded areas represent the minimum and maximum values simulated by WRF-Chem around the station grid cell in a 3×3 and 5×5 grid.
 
 
 Color
 -----
 
-Color is a key element for creating clear, informationally dense, and aesthetically pleasing plots. Yet it is also one of the most frequently misused plotting elements.
+Color is a key element for creating clear, informationally dense, and aesthetically pleasing plots. Yet it is also one of the most frequently misused plotting elements. Note how the perceptually non-uniform "jet" colormap (**b**), highlights specific areas of the image, making it harder to recognize than the more perceptually uniform colors of **a** and **c**.
 
 ![Crameri et al. (2020) Fig. 1](pics/plotting_crameri2020-fig1.jpg)
 
-Tips for using color in plots:
+### Tips for using color in plots:
 
 * Use colors that shows your results clearly and honestly
 * Consider colorblind readers
 * Consider recommendations on best use of color (not always agreed on!) e.g. [Nature Reviews' guide to designing figures](https://www.nature.com/documents/natrev-artworkguide_PS.pdf)
 * When in doubt, a perceptually uniform colormap is a usually good choice for continuous data
 
-Resources for choosing colormaps:
+### Resources for choosing colormaps:
 
 * [Colorbrewer](https://colorbrewer2.org/): sequential, diverging, and qualitative colormaps
 * [i want hue](https://medialab.github.io/iwanthue/): qualitative colormaps
@@ -103,7 +195,7 @@ Python plotting libraries
 [Bokeh](https://bokeh.org/) is another library focusing on interactive graphics.
 
 
-Example plots
--------------
+Examples
+--------
 
 See [improving-plots.ipynb](improving-plots.ipynb)
