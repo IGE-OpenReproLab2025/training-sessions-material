@@ -40,11 +40,11 @@ The expected program is :
   - Q&A session with the participants
  
 - **session 9 - Improving your plots** (May 15th)
-  - ingredients and good practices for academic illustrations [tbd]  
+  - [ingredients and good practices for academic illustrations](improving-plots.md) [Jennie & Ian]  
 
 - **session 10 - Check point #4** (May 22th)
-  - discussing plots from the participants.
-  - 
+  - discussing plots from the participants : [ dos and dont ](https://mensuel.framapad.org/p/22fi1kyftw-aen0) 
+    
 
 ## Useful links
 - https://openreprolab-ige.osug.fr
