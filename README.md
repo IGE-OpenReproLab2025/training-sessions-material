@@ -43,7 +43,16 @@ The expected program is :
   - [ingredients and good practices for academic illustrations](improving-plots.md) [Jennie & Ian]  
 
 - **session 10 - Check point #4** (May 22th)
-  - discussing plots from the participants : [ dos and dont ](https://mensuel.framapad.org/p/22fi1kyftw-aen0) 
+  - discussing plots from the participants : [ dos and dont ](https://mensuel.framapad.org/p/22fi1kyftw-aen0)
+ 
+- **session - Redaction** (June 5th) [Aurélie & Lucas]
+  - [description of OpenReproLab initiative to Master's supervisors](ORL_text.txt]
+ 
+- **session - Review criteria overview** (June 19th)
+  - [list of criteria](https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_acronym-project/issues/2)   
+ 
+- **session - Q&A Review** (July 3rd) [Mykael]
+  - finale session before review, answering questions, more about licences   
     
 
 ## Useful links
