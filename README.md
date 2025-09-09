@@ -46,7 +46,7 @@ The expected program is :
   - discussing plots from the participants : [ dos and dont ](https://mensuel.framapad.org/p/22fi1kyftw-aen0)
  
 - **session - Redaction** (June 5th) [Aurélie & Lucas]
-  - [description of OpenReproLab initiative to Master's supervisors](ORL_text.txt]
+  - [description of OpenReproLab initiative to Master's supervisors](ORL_text.txt)
  
 - **session - Review criteria overview** (June 19th)
   - [list of criteria](https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_acronym-project/issues/2)   
