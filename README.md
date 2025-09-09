@@ -39,22 +39,22 @@ The expected program is :
 - **session 8 - Check point #3** (April 24th)
   - Q&A session with the participants
  
-- **session 9 - Improving your plots** (May 15th)
-  - [ingredients and good practices for academic illustrations](improving-plots.md) [Jennie & Ian]  
+- **session 9 - Improving your plots** (May 15th) [Jennie & Ian]
+  - [ingredients and good practices for academic illustrations](improving-plots.md)   
 
 - **session 10 - Check point #4** (May 22th)
   - discussing plots from the participants : [ dos and dont ](https://mensuel.framapad.org/p/22fi1kyftw-aen0)
  
-- **session - Redaction** (June 5th) [Aurélie & Lucas]
-  - [description of OpenReproLab initiative to Master's supervisors](ORL_text.txt)
- 
-- **session - Review criteria overview** (June 19th)
+- **session 11 - Redaction** (June 5th) [Aurélie & Lucas]
+  - [description](ORL_text.txt) of OpenReproLab initiative to Master's supervisors
+- **session 12 - Review criteria overview** (June 19th)
   - [list of criteria](https://github.com/IGE-OpenReproLab2025/template_ige-m2-internship-2025_acronym-project/issues/2)   
  
-- **session - Q&A Review** (July 3rd) [Mykael]
-  - finale session before review, answering questions, more about licences   
+- **session 13 - Q&A Review** (July 3rd) [Mykael]
+  - last session before review, answering questions, more about licences   
     
-
+- **session 14 - Final Review** (July 10th) [Reviewers' committee]
+  
 ## Useful links
 - https://openreprolab-ige.osug.fr
 - https://ige-calcul.github.io/public-docs/docs/index.html
